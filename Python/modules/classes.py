@@ -8,7 +8,9 @@ import numpy as np
 class extendedModule:
     def __init__(self,homologies,n,m,projectivesDimVect,injectivesDimVect,projectiveRadicals):
         self.homologies = homologies
+        self.id = None
         self.n = n
+        self.xcoord = None
         self.concentratedHomology = isConcentratedHomology(self.homologies,self.n)
         self.injectiveShift = isInjectiveShift(self.homologies,injectivesDimVect,n,self.concentratedHomology)
         if self.injectiveShift[0]==m-1:
