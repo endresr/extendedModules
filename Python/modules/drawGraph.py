@@ -12,7 +12,6 @@ def compile_latex(tex_file_path,outputDirectory):
     Compiles a .tex file to PDF using pdflatex.
         Given by Google's AI
     """
-    temp = '-output-directory '+outputDirectory+' '+tex_file_path
     try:
         # Run pdflatex command
         subprocess.run(['pdflatex', '-output-directory', outputDirectory,"-interaction=batchmode",tex_file_path], check=True)
@@ -56,6 +55,6 @@ def drawTauArrow(M):
 preLatex = r"\documentclass[margin=2mm]{standalone}"+"\n"+r"\usepackage{tikz}"+"\n"+r"\usepackage{amsmath,amssymb,mathtools}"+"\n"+r"\begin{document}"+"\n"
 postLatex = r"\end{document}"
 
-def preTikz(scale=(1,1)):
+def preTikz(scale):
     return r"\begin{tikzpicture}[xscale="+str(scale[0])+",yscale="+str(scale[1])+"]\n"
 postTikz = r"\end{tikzpicture}"

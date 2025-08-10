@@ -22,14 +22,14 @@ Initial variables
 '''
 
 n=5 #Number of vertices
-m=3 #how extended the module category is
+m=2 #how extended the module category is
 
 rel = [(0,2),(2,4)] #list of minimal zero-relations, given through the vertices they start and end in
 cutOffIterations = 100 #How many times do the while loop run before we give up?
 
 #Note that quivers are zero-indexed, i.e. Q_n: 0 -> 1 -> ... -> (n-1)
 
-yLevels = [1,2,3,4,5] #Set the y-level which the tauOrbits of each projective is drawn
+yLevels = [2,-2,-1,1,0] #Set the y-level which the tauOrbits of each projective is drawn
 tikzScale = (2,2) #The x- and y-scale of the tikz diagram
 nodeScale = 0.5 #The scale of each node in the tikz diagram
 setOutputName = None #String with your prefered name for Latex-file
@@ -137,16 +137,22 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
     TikzIrrArrows = ""
     TikzTauArrows = ""
 
+    xMax=0
     for i in range(n):
         y=yLevelsTauOrbits[i]
         for j in range(len(tauOrbits[i])):
             M=tauOrbits[i][j]
             TikzNodes += drawNodes(M,M.xcoord,y,nodeScale)
             TikzIrrArrows += drawIrrArrows(M)
+            if M.xcoord>xMax:
+                xMax=M.xcoord
             if M.tauInv != None:
                 TikzTauArrows += drawTauArrow(M)
 
-    stringToSave = preLatex + preTikz(tikzScale) +TikzNodes+TikzIrrArrows+TikzTauArrows+postTikz+postLatex
+    xMidway=xMax/2
+    yMax = max(yLevelsTauOrbits)+1
+    TikzLabel = r'\node at (' + str(xMidway)+ ','+ str(yMax)+') [] '+r'{$'+str(m)+"$-mod of linear Nakayama with "+str(n)+" vertices and relations "+str(rel) +r'};'+'\n'
+    stringToSave = preLatex + preTikz(tikzScale)+TikzLabel +TikzNodes+TikzIrrArrows+TikzTauArrows+postTikz+postLatex
     currentTime = datetime.today().strftime('%Y-%m-%d')
     if outputName == None:
         texFileName = "_Nakayama_n="+str(n)+"_m="+str(m)
