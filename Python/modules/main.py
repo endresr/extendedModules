@@ -21,17 +21,17 @@ import numpy as np
 Initial variables
 '''
 
-n=9 #Number of vertices
+n=7 #Number of vertices
 
 m=3 #how extended the module category is
 
-rel = [(0,4),(1,5),(2,6),(3,7),(4,8)] #list of minimal zero-relations, given through the vertices they start and end in
-cutOffIterations = 10000 #How many times do the while loop run before we give up?
+rel = [(0,4),(1,5),(2,6)] #list of minimal zero-relations, given through the vertices they start and end in
+cutOffIterations = 100 #How many times do the while loop run before we give up?
 
 #Note that quivers are zero-indexed, i.e. Q_n: 0 -> 1 -> ... -> (n-1)
 
-yLevelsTauOrbtis = [-1,6,-1,5,3,4,2,1,0] #Set the y-level which the tauOrbits of each projective is drawn
-tikzScale = (1,2) #The x- and y-scale of the tikz diagram
+yLevelsTauOrbtis = [-1,5,3,4,2,1,0] #Set the y-level which the tauOrbits of each projective is drawn
+tikzScale = (2,2) #The x- and y-scale of the tikz diagram
 nodeScale = 0.5 #The scale of each node in the tikz diagram
 
 
@@ -111,7 +111,7 @@ for i in range(len(projectiveModules)):
     orbit = [temp]
     counter=0
     temp.id=f"t-{counter}P{i}"
-    while temp.injective == None and counter < calculatedModules:
+    while temp.injective == None and counter < cutOffIterations and temp.tauInv !=None:
         counter +=1
         temp=temp.tauInv
         temp.id=f"t-{counter}P{i}"

@@ -1,9 +1,9 @@
 # Initial data
 
-Q:=Quiver(["v1","v2","v3","v4","v5"],[["v1","v2","a"],["v2","v3","b"],["v3","v4","c"],["v4","v5","d"]]);
+Q:=Quiver(["v1","v2","v3","v4","v5","v6","v7","v8"],[["v1","v2","a"],["v2","v3","b"],["v3","v4","c"],["v4","v5","d"],["v5","v6","e"],["v6","v7","f"],["v7","v8","g"]]);
 KQ:=PathAlgebra(GF(47),Q);
 AssignGeneratorVariables(KQ);
-relns:=[a*b,c*d];
+relns:=[a*b*c*d,b*c*d*e,c*d*e*f,d*e*f*g];
 A:=KQ/relns;
 cat := CatOfRightAlgebraModules(A);
 
@@ -12,25 +12,38 @@ I1:=IndecInjectiveModules(A)[1];
 I2:=IndecInjectiveModules(A)[2];
 I3:=IndecInjectiveModules(A)[3];
 I4:=IndecInjectiveModules(A)[4];
-#I5:=IndecInjectiveModules(A)[5];
+I5:=IndecInjectiveModules(A)[5];
+I6:=IndecInjectiveModules(A)[6];
+I7:=IndecInjectiveModules(A)[7];
+I8:=IndecInjectiveModules(A)[8];
 
 P1:=IndecProjectiveModules(A)[1];
 P2:=IndecProjectiveModules(A)[2];
 P3:=IndecProjectiveModules(A)[3];
 P4:=IndecProjectiveModules(A)[4];
-#P5:=IndecProjectiveModules(A)[5];
+P5:=IndecProjectiveModules(A)[5];
+P6:=IndecProjectiveModules(A)[6];
+P7:=IndecProjectiveModules(A)[7];
+P8:=IndecProjectiveModules(A)[8];
 
 
 S1:=SimpleModules(A)[1];
 S2:=SimpleModules(A)[2];
 S3:=SimpleModules(A)[3];
 S4:=SimpleModules(A)[4];
-#S5:=SimpleModules(A)[5];
+S5:=SimpleModules(A)[5];
+S6:=SimpleModules(A)[6];
+S7:=SimpleModules(A)[7];
+S8:=SimpleModules(A)[8];
+
 
 M12:=Range(AlmostSplitSequence(S1)[1]);
 M23:=Range(AlmostSplitSequence(S2)[1]);
 M34:=Range(AlmostSplitSequence(S3)[1]);
-#M41:=Range(AlmostSplitSequence(S4)[1]);
+M45:=Range(AlmostSplitSequence(S4)[1]);
+M56:=Range(AlmostSplitSequence(S5)[1]);
+M67:=Range(AlmostSplitSequence(S6)[1]);
+M78:=Range(AlmostSplitSequence(S7)[1]);
 
 
 
