@@ -109,3 +109,14 @@ def isRadicalOfProj(homologies,projRadical,n,homDegree):
     else:
         return None
     
+def checkRelations(n,rel):
+    '''
+    Sort the relations and check if they are minimal
+    '''
+    sortedRel= sorted(rel,key=lambda x:x[0])
+    print(sortedRel)
+    tempMax = [b[1] for b in sortedRel]
+    if tempMax != sorted(tempMax) or tempMax[-1]>=n or sortedRel[0][0]<0:
+        return None
+    else:
+        return sortedRel
