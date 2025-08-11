@@ -29,9 +29,9 @@ cutOffIterations = 100 #How many times do the while loop run before we give up?
 
 #Note that quivers are zero-indexed, i.e. Q_n: 0 -> 1 -> ... -> (n-1)
 
-yLevels = [2,-2,-1,1,0] #Set the y-level which the tauOrbits of each projective is drawn
-tikzScale = (2,2) #The x- and y-scale of the tikz diagram
-nodeScale = 0.5 #The scale of each node in the tikz diagram
+yLevels = None #Set the y-level which the tauOrbits of each projective is drawn
+tikzScale = (2,1) #The x- and y-scale of the tikz diagram
+nodeScale = 1 #The scale of each node in the tikz diagram
 setOutputName = None #String with your prefered name for Latex-file
 generateLatex = True #Set to False if you do not want to generate Latex-file
 compileToPDF = True #Set to False if you do not want to automatically compile pdf
@@ -77,7 +77,7 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
         return None
     if yLevels==None or len(yLevels)<n:
         print("Using standard ylevels")
-        yLevelsTauOrbits=yLevels
+        yLevelsTauOrbits=range(n)[::-1]
     else:
         yLevelsTauOrbits=yLevels
     
