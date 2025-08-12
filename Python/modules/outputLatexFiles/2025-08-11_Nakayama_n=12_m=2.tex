@@ -1,0 +1,656 @@
+\documentclass[margin=2mm]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath,amssymb,mathtools}
+\begin{document}
+\begin{tikzpicture}[xscale=2,yscale=1]
+\node at (22.0,5) [] {$2$-mod of linear Nakayama with 12 vertices and relations [(0, 3), (1, 4), (2, 5), (3, 6), (4, 7), (5, 8), (6, 9), (7, 10), (8, 11)]};
+\node (t-0P0) at (35,-1) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P0) at (37,-1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P1) at (31,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P1) at (33,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P2) at (27,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P2) at (29,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P3) at (23,-1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P3) at (25,-1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P4) at (19,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P4) at (21,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P5) at (15,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P5) at (17,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P6) at (11,-1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P6) at (13,-1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P7) at (7,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P7) at (9,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-0P8) at (4,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P8) at (6,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-2P8) at (8,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-3P8) at (10,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-4P8) at (12,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-5P8) at (14,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-6P8) at (16,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-7P8) at (18,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-8P8) at (20,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-9P8) at (22,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-10P8) at (24,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-11P8) at (26,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-12P8) at (28,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-13P8) at (30,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-14P8) at (32,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-15P8) at (34,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-16P8) at (36,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-17P8) at (38,3) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-18P8) at (40,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P9) at (2,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P9) at (4,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+\end{bsmallmatrix}$};
+\node (t-2P9) at (6,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-3P9) at (8,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-4P9) at (10,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-5P9) at (12,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-6P9) at (14,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-7P9) at (16,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-8P9) at (18,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-9P9) at (20,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-10P9) at (22,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-11P9) at (24,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-12P9) at (26,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-13P9) at (28,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-14P9) at (30,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-15P9) at (32,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-16P9) at (34,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-17P9) at (36,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-18P9) at (38,2) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-19P9) at (40,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-20P9) at (42,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-21P9) at (44,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P10) at (1,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P10) at (3,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-2P10) at (5,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+\end{bsmallmatrix}$};
+\node (t-3P10) at (7,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-4P10) at (9,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-5P10) at (11,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-6P10) at (13,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-7P10) at (15,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-8P10) at (17,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-9P10) at (19,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-10P10) at (21,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-11P10) at (23,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-12P10) at (25,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-13P10) at (27,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-14P10) at (29,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-15P10) at (31,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-16P10) at (33,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-17P10) at (35,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-18P10) at (37,1) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-19P10) at (39,1) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-20P10) at (41,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-21P10) at (43,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P11) at (0,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P11) at (2,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-2P11) at (4,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-3P11) at (6,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+\end{bsmallmatrix}$};
+\node (t-4P11) at (8,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-5P11) at (10,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-6P11) at (12,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-7P11) at (14,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-8P11) at (16,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-9P11) at (18,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-10P11) at (20,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-11P11) at (22,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-12P11) at (24,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-13P11) at (26,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-14P11) at (28,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-15P11) at (30,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-16P11) at (32,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-17P11) at (34,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-18P11) at (36,0) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-19P11) at (38,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-20P11) at (40,0) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-21P11) at (42,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\draw[-latex] (t-0P0) -- (t-18P11);
+\draw[-latex] (t-1P0) -- (t-19P11);
+\draw[-latex] (t-0P1) -- (t-15P9);
+\draw[-latex] (t-1P1) -- (t-16P9);
+\draw[-latex] (t-0P2) -- (t-12P8);
+\draw[-latex] (t-1P2) -- (t-13P8);
+\draw[-latex] (t-0P3) -- (t-12P11);
+\draw[-latex] (t-1P3) -- (t-13P11);
+\draw[-latex] (t-0P4) -- (t-9P9);
+\draw[-latex] (t-1P4) -- (t-10P9);
+\draw[-latex] (t-0P5) -- (t-6P8);
+\draw[-latex] (t-1P5) -- (t-7P8);
+\draw[-latex] (t-0P6) -- (t-6P11);
+\draw[-latex] (t-1P6) -- (t-7P11);
+\draw[-latex] (t-0P7) -- (t-3P9);
+\draw[-latex] (t-1P7) -- (t-4P9);
+\draw[-latex] (t-0P8) -- (t-2P10);
+\draw[-latex] (t-1P8) -- (t-3P10);
+\draw[-latex] (t-2P8) -- (t-4P10);
+\draw[-latex] (t-3P8) -- (t-5P10);
+\draw[-latex] (t-4P8) -- (t-6P10);
+\draw[-latex] (t-5P8) -- (t-0P5);
+\draw[-latex] (t-5P8) -- (t-7P10);
+\draw[-latex] (t-6P8) -- (t-1P5);
+\draw[-latex] (t-6P8) -- (t-8P10);
+\draw[-latex] (t-7P8) -- (t-9P10);
+\draw[-latex] (t-8P8) -- (t-10P10);
+\draw[-latex] (t-9P8) -- (t-11P10);
+\draw[-latex] (t-10P8) -- (t-12P10);
+\draw[-latex] (t-11P8) -- (t-0P2);
+\draw[-latex] (t-11P8) -- (t-13P10);
+\draw[-latex] (t-12P8) -- (t-1P2);
+\draw[-latex] (t-12P8) -- (t-14P10);
+\draw[-latex] (t-13P8) -- (t-15P10);
+\draw[-latex] (t-14P8) -- (t-16P10);
+\draw[-latex] (t-15P8) -- (t-17P10);
+\draw[-latex] (t-16P8) -- (t-18P10);
+\draw[-latex] (t-17P8) -- (t-19P10);
+\draw[-latex] (t-18P8) -- (t-20P10);
+\draw[-latex] (t-0P9) -- (t-1P10);
+\draw[-latex] (t-1P9) -- (t-2P10);
+\draw[-latex] (t-2P9) -- (t-0P7);
+\draw[-latex] (t-2P9) -- (t-3P10);
+\draw[-latex] (t-3P9) -- (t-4P10);
+\draw[-latex] (t-3P9) -- (t-1P7);
+\draw[-latex] (t-4P9) -- (t-5P10);
+\draw[-latex] (t-5P9) -- (t-6P10);
+\draw[-latex] (t-6P9) -- (t-7P10);
+\draw[-latex] (t-7P9) -- (t-8P10);
+\draw[-latex] (t-8P9) -- (t-0P4);
+\draw[-latex] (t-8P9) -- (t-9P10);
+\draw[-latex] (t-9P9) -- (t-10P10);
+\draw[-latex] (t-9P9) -- (t-1P4);
+\draw[-latex] (t-10P9) -- (t-11P10);
+\draw[-latex] (t-11P9) -- (t-12P10);
+\draw[-latex] (t-12P9) -- (t-13P10);
+\draw[-latex] (t-13P9) -- (t-14P10);
+\draw[-latex] (t-14P9) -- (t-0P1);
+\draw[-latex] (t-14P9) -- (t-15P10);
+\draw[-latex] (t-15P9) -- (t-16P10);
+\draw[-latex] (t-15P9) -- (t-1P1);
+\draw[-latex] (t-16P9) -- (t-17P10);
+\draw[-latex] (t-17P9) -- (t-18P10);
+\draw[-latex] (t-18P9) -- (t-19P10);
+\draw[-latex] (t-19P9) -- (t-20P10);
+\draw[-latex] (t-20P9) -- (t-21P10);
+\draw[-latex] (t-0P10) -- (t-0P9);
+\draw[-latex] (t-0P10) -- (t-1P11);
+\draw[-latex] (t-1P10) -- (t-0P8);
+\draw[-latex] (t-1P10) -- (t-1P9);
+\draw[-latex] (t-1P10) -- (t-2P11);
+\draw[-latex] (t-2P10) -- (t-1P8);
+\draw[-latex] (t-2P10) -- (t-2P9);
+\draw[-latex] (t-2P10) -- (t-3P11);
+\draw[-latex] (t-3P10) -- (t-2P8);
+\draw[-latex] (t-3P10) -- (t-3P9);
+\draw[-latex] (t-3P10) -- (t-4P11);
+\draw[-latex] (t-4P10) -- (t-3P8);
+\draw[-latex] (t-4P10) -- (t-4P9);
+\draw[-latex] (t-4P10) -- (t-5P11);
+\draw[-latex] (t-5P10) -- (t-4P8);
+\draw[-latex] (t-5P10) -- (t-5P9);
+\draw[-latex] (t-5P10) -- (t-6P11);
+\draw[-latex] (t-6P10) -- (t-5P8);
+\draw[-latex] (t-6P10) -- (t-6P9);
+\draw[-latex] (t-6P10) -- (t-7P11);
+\draw[-latex] (t-7P10) -- (t-6P8);
+\draw[-latex] (t-7P10) -- (t-7P9);
+\draw[-latex] (t-7P10) -- (t-8P11);
+\draw[-latex] (t-8P10) -- (t-7P8);
+\draw[-latex] (t-8P10) -- (t-8P9);
+\draw[-latex] (t-8P10) -- (t-9P11);
+\draw[-latex] (t-9P10) -- (t-8P8);
+\draw[-latex] (t-9P10) -- (t-9P9);
+\draw[-latex] (t-9P10) -- (t-10P11);
+\draw[-latex] (t-10P10) -- (t-9P8);
+\draw[-latex] (t-10P10) -- (t-10P9);
+\draw[-latex] (t-10P10) -- (t-11P11);
+\draw[-latex] (t-11P10) -- (t-10P8);
+\draw[-latex] (t-11P10) -- (t-11P9);
+\draw[-latex] (t-11P10) -- (t-12P11);
+\draw[-latex] (t-12P10) -- (t-11P8);
+\draw[-latex] (t-12P10) -- (t-12P9);
+\draw[-latex] (t-12P10) -- (t-13P11);
+\draw[-latex] (t-13P10) -- (t-12P8);
+\draw[-latex] (t-13P10) -- (t-13P9);
+\draw[-latex] (t-13P10) -- (t-14P11);
+\draw[-latex] (t-14P10) -- (t-13P8);
+\draw[-latex] (t-14P10) -- (t-14P9);
+\draw[-latex] (t-14P10) -- (t-15P11);
+\draw[-latex] (t-15P10) -- (t-14P8);
+\draw[-latex] (t-15P10) -- (t-15P9);
+\draw[-latex] (t-15P10) -- (t-16P11);
+\draw[-latex] (t-16P10) -- (t-15P8);
+\draw[-latex] (t-16P10) -- (t-16P9);
+\draw[-latex] (t-16P10) -- (t-17P11);
+\draw[-latex] (t-17P10) -- (t-16P8);
+\draw[-latex] (t-17P10) -- (t-17P9);
+\draw[-latex] (t-17P10) -- (t-18P11);
+\draw[-latex] (t-18P10) -- (t-17P8);
+\draw[-latex] (t-18P10) -- (t-18P9);
+\draw[-latex] (t-18P10) -- (t-19P11);
+\draw[-latex] (t-19P10) -- (t-18P8);
+\draw[-latex] (t-19P10) -- (t-19P9);
+\draw[-latex] (t-19P10) -- (t-20P11);
+\draw[-latex] (t-20P10) -- (t-20P9);
+\draw[-latex] (t-20P10) -- (t-21P11);
+\draw[-latex] (t-21P10) -- (t-21P9);
+\draw[-latex] (t-0P11) -- (t-0P10);
+\draw[-latex] (t-1P11) -- (t-1P10);
+\draw[-latex] (t-2P11) -- (t-2P10);
+\draw[-latex] (t-3P11) -- (t-3P10);
+\draw[-latex] (t-4P11) -- (t-4P10);
+\draw[-latex] (t-5P11) -- (t-0P6);
+\draw[-latex] (t-5P11) -- (t-5P10);
+\draw[-latex] (t-6P11) -- (t-6P10);
+\draw[-latex] (t-6P11) -- (t-1P6);
+\draw[-latex] (t-7P11) -- (t-7P10);
+\draw[-latex] (t-8P11) -- (t-8P10);
+\draw[-latex] (t-9P11) -- (t-9P10);
+\draw[-latex] (t-10P11) -- (t-10P10);
+\draw[-latex] (t-11P11) -- (t-0P3);
+\draw[-latex] (t-11P11) -- (t-11P10);
+\draw[-latex] (t-12P11) -- (t-12P10);
+\draw[-latex] (t-12P11) -- (t-1P3);
+\draw[-latex] (t-13P11) -- (t-13P10);
+\draw[-latex] (t-14P11) -- (t-14P10);
+\draw[-latex] (t-15P11) -- (t-15P10);
+\draw[-latex] (t-16P11) -- (t-16P10);
+\draw[-latex] (t-17P11) -- (t-0P0);
+\draw[-latex] (t-17P11) -- (t-17P10);
+\draw[-latex] (t-18P11) -- (t-18P10);
+\draw[-latex] (t-18P11) -- (t-1P0);
+\draw[-latex] (t-19P11) -- (t-19P10);
+\draw[-latex] (t-20P11) -- (t-20P10);
+\draw[-latex] (t-21P11) -- (t-21P10);
+\draw[dashed] (t-0P0)--(t-1P0);
+\draw[dashed] (t-0P1)--(t-1P1);
+\draw[dashed] (t-0P2)--(t-1P2);
+\draw[dashed] (t-0P3)--(t-1P3);
+\draw[dashed] (t-0P4)--(t-1P4);
+\draw[dashed] (t-0P5)--(t-1P5);
+\draw[dashed] (t-0P6)--(t-1P6);
+\draw[dashed] (t-0P7)--(t-1P7);
+\draw[dashed] (t-0P8)--(t-1P8);
+\draw[dashed] (t-1P8)--(t-2P8);
+\draw[dashed] (t-2P8)--(t-3P8);
+\draw[dashed] (t-3P8)--(t-4P8);
+\draw[dashed] (t-4P8)--(t-5P8);
+\draw[dashed] (t-5P8)--(t-6P8);
+\draw[dashed] (t-6P8)--(t-7P8);
+\draw[dashed] (t-7P8)--(t-8P8);
+\draw[dashed] (t-8P8)--(t-9P8);
+\draw[dashed] (t-9P8)--(t-10P8);
+\draw[dashed] (t-10P8)--(t-11P8);
+\draw[dashed] (t-11P8)--(t-12P8);
+\draw[dashed] (t-12P8)--(t-13P8);
+\draw[dashed] (t-13P8)--(t-14P8);
+\draw[dashed] (t-14P8)--(t-15P8);
+\draw[dashed] (t-15P8)--(t-16P8);
+\draw[dashed] (t-16P8)--(t-17P8);
+\draw[dashed] (t-17P8)--(t-18P8);
+\draw[dashed] (t-0P9)--(t-1P9);
+\draw[dashed] (t-1P9)--(t-2P9);
+\draw[dashed] (t-2P9)--(t-3P9);
+\draw[dashed] (t-3P9)--(t-4P9);
+\draw[dashed] (t-4P9)--(t-5P9);
+\draw[dashed] (t-5P9)--(t-6P9);
+\draw[dashed] (t-6P9)--(t-7P9);
+\draw[dashed] (t-7P9)--(t-8P9);
+\draw[dashed] (t-8P9)--(t-9P9);
+\draw[dashed] (t-9P9)--(t-10P9);
+\draw[dashed] (t-10P9)--(t-11P9);
+\draw[dashed] (t-11P9)--(t-12P9);
+\draw[dashed] (t-12P9)--(t-13P9);
+\draw[dashed] (t-13P9)--(t-14P9);
+\draw[dashed] (t-14P9)--(t-15P9);
+\draw[dashed] (t-15P9)--(t-16P9);
+\draw[dashed] (t-16P9)--(t-17P9);
+\draw[dashed] (t-17P9)--(t-18P9);
+\draw[dashed] (t-18P9)--(t-19P9);
+\draw[dashed] (t-19P9)--(t-20P9);
+\draw[dashed] (t-20P9)--(t-21P9);
+\draw[dashed] (t-0P10)--(t-1P10);
+\draw[dashed] (t-1P10)--(t-2P10);
+\draw[dashed] (t-2P10)--(t-3P10);
+\draw[dashed] (t-3P10)--(t-4P10);
+\draw[dashed] (t-4P10)--(t-5P10);
+\draw[dashed] (t-5P10)--(t-6P10);
+\draw[dashed] (t-6P10)--(t-7P10);
+\draw[dashed] (t-7P10)--(t-8P10);
+\draw[dashed] (t-8P10)--(t-9P10);
+\draw[dashed] (t-9P10)--(t-10P10);
+\draw[dashed] (t-10P10)--(t-11P10);
+\draw[dashed] (t-11P10)--(t-12P10);
+\draw[dashed] (t-12P10)--(t-13P10);
+\draw[dashed] (t-13P10)--(t-14P10);
+\draw[dashed] (t-14P10)--(t-15P10);
+\draw[dashed] (t-15P10)--(t-16P10);
+\draw[dashed] (t-16P10)--(t-17P10);
+\draw[dashed] (t-17P10)--(t-18P10);
+\draw[dashed] (t-18P10)--(t-19P10);
+\draw[dashed] (t-19P10)--(t-20P10);
+\draw[dashed] (t-20P10)--(t-21P10);
+\draw[dashed] (t-0P11)--(t-1P11);
+\draw[dashed] (t-1P11)--(t-2P11);
+\draw[dashed] (t-2P11)--(t-3P11);
+\draw[dashed] (t-3P11)--(t-4P11);
+\draw[dashed] (t-4P11)--(t-5P11);
+\draw[dashed] (t-5P11)--(t-6P11);
+\draw[dashed] (t-6P11)--(t-7P11);
+\draw[dashed] (t-7P11)--(t-8P11);
+\draw[dashed] (t-8P11)--(t-9P11);
+\draw[dashed] (t-9P11)--(t-10P11);
+\draw[dashed] (t-10P11)--(t-11P11);
+\draw[dashed] (t-11P11)--(t-12P11);
+\draw[dashed] (t-12P11)--(t-13P11);
+\draw[dashed] (t-13P11)--(t-14P11);
+\draw[dashed] (t-14P11)--(t-15P11);
+\draw[dashed] (t-15P11)--(t-16P11);
+\draw[dashed] (t-16P11)--(t-17P11);
+\draw[dashed] (t-17P11)--(t-18P11);
+\draw[dashed] (t-18P11)--(t-19P11);
+\draw[dashed] (t-19P11)--(t-20P11);
+\draw[dashed] (t-20P11)--(t-21P11);
+\end{tikzpicture}\end{document}

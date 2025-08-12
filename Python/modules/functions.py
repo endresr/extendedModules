@@ -7,8 +7,8 @@ def findProjectivesDim(n,relations):
         upper = next((r[1] for r in relations if a<=r[0]),n)-1
         proj=[1 if a<=i and i<=upper else 0 for i in range(0,n)]
         projRad=[1 if a<i and i<=upper else 0 for i in range(0,n)]
-        projectives.append(np.array(proj))
-        projRadical.append(np.array(projRad))
+        projectives.append(np.array(proj,dtype='int64'))
+        projRadical.append(np.array(projRad,dtype='int64'))
     return projectives,projRadical
 
 def findHomologyOfProjectives(dimVecs,n,m):

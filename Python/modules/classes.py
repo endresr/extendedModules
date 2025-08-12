@@ -23,7 +23,7 @@ class extendedModule:
         self.homologies = homologies
         self.id = None #Is added when we construct the Latex-code
         self.n = n
-        self.xcoord = None #Is added dependent on the x-coordinate of the modules in self.irrTo
+        self.xcoord = 0 #Is added dependent on the x-coordinate of the modules in self.irrTo
         self.concentratedHomology = isConcentratedHomology(self.homologies,self.n) #None if homology is not concentrated, i - int if concentrated in ith homology
         self.injectiveShift = isInjectiveShift(self.homologies,injectivesDimVect,n,self.concentratedHomology) #None, None if not a shift of injective; a,b if equal to I_b[a]
         if self.injectiveShift[0]==m-1:

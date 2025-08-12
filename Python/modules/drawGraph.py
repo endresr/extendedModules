@@ -40,7 +40,7 @@ def bmatrix(a):
     return '\n'.join(rv)
 
 def drawNodes(M,x,y,scale=1):
-    node =r'\node (' + M.id +') at (' + str(x)+ ','+ str(y)+') [scale='+str(scale)+'] '+r'{$'+bmatrix(M.homologies[::].astype(np.int16))+r'$};'+'\n'
+    node =r'\node (' + M.id +') at (' + str(x)+ ','+ str(y)+') [scale='+str(scale)+'] '+r'{$'+bmatrix(M.homologies[::].astype(np.int64))+r'$};'+'\n'
     return node
 
 def drawIrrArrows(M):

@@ -21,16 +21,17 @@ import numpy as np
 Initial variables
 '''
 
-n=5 #Number of vertices
+n=13 #Number of vertices
 m=2 #how extended the module category is
+l=None #integer if you want relations Rad^l, None if you want to define your own relations
 
-rel = [(0,2),(2,4)] #list of minimal zero-relations, given through the vertices they start and end in
+rel = [(0,9),(3,12)] #list of minimal zero-relations, given through the vertices they start and end in
 cutOffIterations = 100 #How many times do the while loop run before we give up?
 
 #Note that quivers are zero-indexed, i.e. Q_n: 0 -> 1 -> ... -> (n-1)
 
-yLevels = None #Set the y-level which the tauOrbits of each projective is drawn
-tikzScale = (2,1) #The x- and y-scale of the tikz diagram
+yLevels = [] #Set the y-level which the tauOrbits of each projective is drawn
+tikzScale = (4,2) #The x- and y-scale of the tikz diagram
 nodeScale = 1 #The scale of each node in the tikz diagram
 setOutputName = None #String with your prefered name for Latex-file
 generateLatex = True #Set to False if you do not want to generate Latex-file
@@ -103,9 +104,12 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
     
     counter=1
     notFinishedARquiver = False
-    while len(Next)>0 and counter<cutOff:
+    continueLoop = True
+    while len(Next)>0 and counter<cutOff and continueLoop:
         tempNext = []
         for M in Next:
+            if (M.homologies<0).any():
+                continueLoop=False
             if M.tauInv == None:
                 tauInv(M,projectiveModules,radicalOfProjectives,dimProjectives,dimInjectives,n,m,modules)
             tempNext+=(M.irrTo)
@@ -114,6 +118,8 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
         if counter>=cutOff and len(Next)>0:
             print("Reached cutoff-value before finishing.")
             notFinishedARquiver = True
+        if continueLoop == False and len(Next)>0:
+            print("Error: Homologies are non-positive")
     print(str(len(modules))+" calculated modules")
     calculatedModules=len(modules)
 
@@ -144,7 +150,7 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
             M=tauOrbits[i][j]
             TikzNodes += drawNodes(M,M.xcoord,y,nodeScale)
             TikzIrrArrows += drawIrrArrows(M)
-            if M.xcoord>xMax:
+            if M.xcoord!=None and M.xcoord>xMax:
                 xMax=M.xcoord
             if M.tauInv != None:
                 TikzTauArrows += drawTauArrow(M)
@@ -170,4 +176,11 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
     print("We found "+str(calculatedModules)+" "+str(m)+"-modules of the algebra.")
     return tauOrbits
 
-mainLoop(n,rel,m,cutOffIterations,yLevels,tikzScale,nodeScale,setOutputName,generateLatex,compileToPDF)
+if l != None:
+    relationsInput = [(i,i+l) for i in range(n-l)]
+    if setOutputName == None:
+        setOutputName = "HomogeneousNakayama_n="+str(n)+"_m="+str(m)+"_l="+str(l)
+else:
+    relationsInput = rel
+
+tauOrbits=mainLoop(n,relationsInput,m,cutOffIterations,yLevels,tikzScale,nodeScale,setOutputName,generateLatex,compileToPDF)

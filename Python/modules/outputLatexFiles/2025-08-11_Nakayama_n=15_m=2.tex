@@ -1,0 +1,1545 @@
+\documentclass[margin=2mm]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath,amssymb,mathtools}
+\begin{document}
+\begin{tikzpicture}[xscale=2,yscale=2]
+\node at (38.0,15) [] {$2$-mod of linear Nakayama with 15 vertices and relations [(0, 4), (1, 5), (2, 6), (3, 7), (4, 8), (5, 9), (6, 10), (7, 11), (8, 12), (9, 13), (10, 14)]};
+\node (t-0P0) at (61,14) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P0) at (63,14) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P1) at (55,13) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P1) at (57,13) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P2) at (49,12) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P2) at (51,12) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P3) at (43,11) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P3) at (45,11) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P4) at (37,10) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P4) at (39,10) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P5) at (31,9) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P5) at (33,9) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P6) at (25,8) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P6) at (27,8) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P7) at (19,7) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P7) at (21,7) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P8) at (13,6) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P8) at (15,6) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-0P9) at (8,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P9) at (10,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-2P9) at (12,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-3P9) at (14,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-4P9) at (16,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-5P9) at (18,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-6P9) at (20,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-7P9) at (22,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-8P9) at (24,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-9P9) at (26,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-10P9) at (28,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-11P9) at (30,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-12P9) at (32,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-13P9) at (34,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-14P9) at (36,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-15P9) at (38,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-16P9) at (40,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-17P9) at (42,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-18P9) at (44,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-19P9) at (46,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-20P9) at (48,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-21P9) at (50,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-22P9) at (52,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-23P9) at (54,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-24P9) at (56,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-25P9) at (58,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-26P9) at (60,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-27P9) at (62,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-28P9) at (64,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-29P9) at (66,5) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-30P9) at (68,5) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P10) at (5,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P10) at (7,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-2P10) at (9,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-3P10) at (11,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-4P10) at (13,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-5P10) at (15,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-6P10) at (17,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-7P10) at (19,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-8P10) at (21,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-9P10) at (23,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-10P10) at (25,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-11P10) at (27,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-12P10) at (29,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-13P10) at (31,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-14P10) at (33,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-15P10) at (35,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-16P10) at (37,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-17P10) at (39,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-18P10) at (41,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-19P10) at (43,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-20P10) at (45,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-21P10) at (47,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-22P10) at (49,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-23P10) at (51,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-24P10) at (53,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-25P10) at (55,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-26P10) at (57,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-27P10) at (59,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-28P10) at (61,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-29P10) at (63,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-30P10) at (65,4) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-31P10) at (67,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-32P10) at (69,4) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-33P10) at (71,4) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P11) at (3,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P11) at (5,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+\end{bsmallmatrix}$};
+\node (t-2P11) at (7,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-3P11) at (9,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-4P11) at (11,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-5P11) at (13,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-6P11) at (15,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-7P11) at (17,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-8P11) at (19,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-9P11) at (21,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-10P11) at (23,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-11P11) at (25,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-12P11) at (27,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-13P11) at (29,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-14P11) at (31,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-15P11) at (33,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-16P11) at (35,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-17P11) at (37,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-18P11) at (39,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-19P11) at (41,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-20P11) at (43,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-21P11) at (45,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-22P11) at (47,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-23P11) at (49,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-24P11) at (51,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-25P11) at (53,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-26P11) at (55,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-27P11) at (57,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-28P11) at (59,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-29P11) at (61,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-30P11) at (63,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-31P11) at (65,3) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-32P11) at (67,3) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-33P11) at (69,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-34P11) at (71,3) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-35P11) at (73,3) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P12) at (2,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P12) at (4,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-2P12) at (6,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+\end{bsmallmatrix}$};
+\node (t-3P12) at (8,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-4P12) at (10,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-5P12) at (12,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1\\
+\end{bsmallmatrix}$};
+\node (t-6P12) at (14,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-7P12) at (16,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-8P12) at (18,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-9P12) at (20,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-10P12) at (22,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-11P12) at (24,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-12P12) at (26,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-13P12) at (28,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-14P12) at (30,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-15P12) at (32,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-16P12) at (34,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-17P12) at (36,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-18P12) at (38,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-19P12) at (40,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-20P12) at (42,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-21P12) at (44,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-22P12) at (46,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-23P12) at (48,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-24P12) at (50,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-25P12) at (52,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-26P12) at (54,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-27P12) at (56,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-28P12) at (58,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-29P12) at (60,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-30P12) at (62,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-31P12) at (64,2) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-32P12) at (66,2) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-33P12) at (68,2) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-34P12) at (70,2) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-35P12) at (72,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-36P12) at (74,2) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P13) at (1,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P13) at (3,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-2P13) at (5,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-3P13) at (7,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+\end{bsmallmatrix}$};
+\node (t-4P13) at (9,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-5P13) at (11,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-6P13) at (13,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-7P13) at (15,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-8P13) at (17,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-9P13) at (19,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-10P13) at (21,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-11P13) at (23,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-12P13) at (25,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-13P13) at (27,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-14P13) at (29,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-15P13) at (31,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-16P13) at (33,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-17P13) at (35,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-18P13) at (37,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-19P13) at (39,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-20P13) at (41,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-21P13) at (43,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-22P13) at (45,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-23P13) at (47,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-24P13) at (49,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-25P13) at (51,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-26P13) at (53,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-27P13) at (55,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-28P13) at (57,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-29P13) at (59,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-30P13) at (61,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-31P13) at (63,1) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-32P13) at (65,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-33P13) at (67,1) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-34P13) at (69,1) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-35P13) at (71,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-36P13) at (73,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-37P13) at (75,1) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-0P14) at (0,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-1P14) at (2,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-2P14) at (4,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-3P14) at (6,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-4P14) at (8,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+\end{bsmallmatrix}$};
+\node (t-5P14) at (10,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-6P14) at (12,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-7P14) at (14,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1\\
+\end{bsmallmatrix}$};
+\node (t-8P14) at (16,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0\\
+\end{bsmallmatrix}$};
+\node (t-9P14) at (18,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-10P14) at (20,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-11P14) at (22,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-12P14) at (24,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-13P14) at (26,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-14P14) at (28,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-15P14) at (30,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-16P14) at (32,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-17P14) at (34,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-18P14) at (36,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-19P14) at (38,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-20P14) at (40,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-21P14) at (42,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-22P14) at (44,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-23P14) at (46,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-24P14) at (48,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-25P14) at (50,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-26P14) at (52,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-27P14) at (54,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-28P14) at (56,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-29P14) at (58,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-30P14) at (60,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-31P14) at (62,0) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-32P14) at (64,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-33P14) at (66,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-34P14) at (68,0) [scale=1] {$\begin{bsmallmatrix}
+ 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-35P14) at (70,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-36P14) at (72,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-37P14) at (74,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\node (t-38P14) at (76,0) [scale=1] {$\begin{bsmallmatrix}
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+ 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{bsmallmatrix}$};
+\draw[-latex] (t-0P0) -- (t-31P14);
+\draw[-latex] (t-1P0) -- (t-32P14);
+\draw[-latex] (t-0P1) -- (t-24P9);
+\draw[-latex] (t-1P1) -- (t-25P9);
+\draw[-latex] (t-0P2) -- (t-25P14);
+\draw[-latex] (t-1P2) -- (t-26P14);
+\draw[-latex] (t-0P3) -- (t-18P9);
+\draw[-latex] (t-1P3) -- (t-19P9);
+\draw[-latex] (t-0P4) -- (t-19P14);
+\draw[-latex] (t-1P4) -- (t-20P14);
+\draw[-latex] (t-0P5) -- (t-12P9);
+\draw[-latex] (t-1P5) -- (t-13P9);
+\draw[-latex] (t-0P6) -- (t-13P14);
+\draw[-latex] (t-1P6) -- (t-14P14);
+\draw[-latex] (t-0P7) -- (t-6P9);
+\draw[-latex] (t-1P7) -- (t-7P9);
+\draw[-latex] (t-0P8) -- (t-7P14);
+\draw[-latex] (t-1P8) -- (t-8P14);
+\draw[-latex] (t-0P9) -- (t-3P11);
+\draw[-latex] (t-1P9) -- (t-4P11);
+\draw[-latex] (t-2P9) -- (t-5P11);
+\draw[-latex] (t-3P9) -- (t-6P11);
+\draw[-latex] (t-4P9) -- (t-7P11);
+\draw[-latex] (t-5P9) -- (t-0P7);
+\draw[-latex] (t-5P9) -- (t-8P11);
+\draw[-latex] (t-6P9) -- (t-9P11);
+\draw[-latex] (t-6P9) -- (t-1P7);
+\draw[-latex] (t-7P9) -- (t-10P11);
+\draw[-latex] (t-8P9) -- (t-11P11);
+\draw[-latex] (t-9P9) -- (t-12P11);
+\draw[-latex] (t-10P9) -- (t-13P11);
+\draw[-latex] (t-11P9) -- (t-0P5);
+\draw[-latex] (t-11P9) -- (t-14P11);
+\draw[-latex] (t-12P9) -- (t-15P11);
+\draw[-latex] (t-12P9) -- (t-1P5);
+\draw[-latex] (t-13P9) -- (t-16P11);
+\draw[-latex] (t-14P9) -- (t-17P11);
+\draw[-latex] (t-15P9) -- (t-18P11);
+\draw[-latex] (t-16P9) -- (t-19P11);
+\draw[-latex] (t-17P9) -- (t-0P3);
+\draw[-latex] (t-17P9) -- (t-20P11);
+\draw[-latex] (t-18P9) -- (t-21P11);
+\draw[-latex] (t-18P9) -- (t-1P3);
+\draw[-latex] (t-19P9) -- (t-22P11);
+\draw[-latex] (t-20P9) -- (t-23P11);
+\draw[-latex] (t-21P9) -- (t-24P11);
+\draw[-latex] (t-22P9) -- (t-25P11);
+\draw[-latex] (t-23P9) -- (t-0P1);
+\draw[-latex] (t-23P9) -- (t-26P11);
+\draw[-latex] (t-24P9) -- (t-27P11);
+\draw[-latex] (t-24P9) -- (t-1P1);
+\draw[-latex] (t-25P9) -- (t-28P11);
+\draw[-latex] (t-26P9) -- (t-29P11);
+\draw[-latex] (t-27P9) -- (t-30P11);
+\draw[-latex] (t-28P9) -- (t-31P11);
+\draw[-latex] (t-29P9) -- (t-32P11);
+\draw[-latex] (t-30P9) -- (t-33P11);
+\draw[-latex] (t-0P10) -- (t-2P12);
+\draw[-latex] (t-1P10) -- (t-3P12);
+\draw[-latex] (t-2P10) -- (t-4P12);
+\draw[-latex] (t-3P10) -- (t-5P12);
+\draw[-latex] (t-4P10) -- (t-6P12);
+\draw[-latex] (t-5P10) -- (t-7P12);
+\draw[-latex] (t-6P10) -- (t-8P12);
+\draw[-latex] (t-7P10) -- (t-9P12);
+\draw[-latex] (t-8P10) -- (t-10P12);
+\draw[-latex] (t-9P10) -- (t-11P12);
+\draw[-latex] (t-10P10) -- (t-12P12);
+\draw[-latex] (t-11P10) -- (t-13P12);
+\draw[-latex] (t-12P10) -- (t-14P12);
+\draw[-latex] (t-13P10) -- (t-15P12);
+\draw[-latex] (t-14P10) -- (t-16P12);
+\draw[-latex] (t-15P10) -- (t-17P12);
+\draw[-latex] (t-16P10) -- (t-18P12);
+\draw[-latex] (t-17P10) -- (t-19P12);
+\draw[-latex] (t-18P10) -- (t-20P12);
+\draw[-latex] (t-19P10) -- (t-21P12);
+\draw[-latex] (t-20P10) -- (t-22P12);
+\draw[-latex] (t-21P10) -- (t-23P12);
+\draw[-latex] (t-22P10) -- (t-24P12);
+\draw[-latex] (t-23P10) -- (t-25P12);
+\draw[-latex] (t-24P10) -- (t-26P12);
+\draw[-latex] (t-25P10) -- (t-27P12);
+\draw[-latex] (t-26P10) -- (t-28P12);
+\draw[-latex] (t-27P10) -- (t-29P12);
+\draw[-latex] (t-28P10) -- (t-30P12);
+\draw[-latex] (t-29P10) -- (t-31P12);
+\draw[-latex] (t-30P10) -- (t-32P12);
+\draw[-latex] (t-31P10) -- (t-33P12);
+\draw[-latex] (t-32P10) -- (t-34P12);
+\draw[-latex] (t-33P10) -- (t-35P12);
+\draw[-latex] (t-0P11) -- (t-1P12);
+\draw[-latex] (t-1P11) -- (t-2P12);
+\draw[-latex] (t-2P11) -- (t-0P9);
+\draw[-latex] (t-2P11) -- (t-3P12);
+\draw[-latex] (t-3P11) -- (t-4P12);
+\draw[-latex] (t-3P11) -- (t-1P9);
+\draw[-latex] (t-4P11) -- (t-5P12);
+\draw[-latex] (t-4P11) -- (t-2P9);
+\draw[-latex] (t-5P11) -- (t-6P12);
+\draw[-latex] (t-5P11) -- (t-3P9);
+\draw[-latex] (t-6P11) -- (t-7P12);
+\draw[-latex] (t-6P11) -- (t-4P9);
+\draw[-latex] (t-7P11) -- (t-8P12);
+\draw[-latex] (t-7P11) -- (t-5P9);
+\draw[-latex] (t-8P11) -- (t-9P12);
+\draw[-latex] (t-8P11) -- (t-6P9);
+\draw[-latex] (t-9P11) -- (t-10P12);
+\draw[-latex] (t-9P11) -- (t-7P9);
+\draw[-latex] (t-10P11) -- (t-11P12);
+\draw[-latex] (t-10P11) -- (t-8P9);
+\draw[-latex] (t-11P11) -- (t-12P12);
+\draw[-latex] (t-11P11) -- (t-9P9);
+\draw[-latex] (t-12P11) -- (t-13P12);
+\draw[-latex] (t-12P11) -- (t-10P9);
+\draw[-latex] (t-13P11) -- (t-14P12);
+\draw[-latex] (t-13P11) -- (t-11P9);
+\draw[-latex] (t-14P11) -- (t-15P12);
+\draw[-latex] (t-14P11) -- (t-12P9);
+\draw[-latex] (t-15P11) -- (t-16P12);
+\draw[-latex] (t-15P11) -- (t-13P9);
+\draw[-latex] (t-16P11) -- (t-17P12);
+\draw[-latex] (t-16P11) -- (t-14P9);
+\draw[-latex] (t-17P11) -- (t-18P12);
+\draw[-latex] (t-17P11) -- (t-15P9);
+\draw[-latex] (t-18P11) -- (t-19P12);
+\draw[-latex] (t-18P11) -- (t-16P9);
+\draw[-latex] (t-19P11) -- (t-20P12);
+\draw[-latex] (t-19P11) -- (t-17P9);
+\draw[-latex] (t-20P11) -- (t-21P12);
+\draw[-latex] (t-20P11) -- (t-18P9);
+\draw[-latex] (t-21P11) -- (t-22P12);
+\draw[-latex] (t-21P11) -- (t-19P9);
+\draw[-latex] (t-22P11) -- (t-23P12);
+\draw[-latex] (t-22P11) -- (t-20P9);
+\draw[-latex] (t-23P11) -- (t-24P12);
+\draw[-latex] (t-23P11) -- (t-21P9);
+\draw[-latex] (t-24P11) -- (t-25P12);
+\draw[-latex] (t-24P11) -- (t-22P9);
+\draw[-latex] (t-25P11) -- (t-26P12);
+\draw[-latex] (t-25P11) -- (t-23P9);
+\draw[-latex] (t-26P11) -- (t-27P12);
+\draw[-latex] (t-26P11) -- (t-24P9);
+\draw[-latex] (t-27P11) -- (t-28P12);
+\draw[-latex] (t-27P11) -- (t-25P9);
+\draw[-latex] (t-28P11) -- (t-29P12);
+\draw[-latex] (t-28P11) -- (t-26P9);
+\draw[-latex] (t-29P11) -- (t-30P12);
+\draw[-latex] (t-29P11) -- (t-27P9);
+\draw[-latex] (t-30P11) -- (t-31P12);
+\draw[-latex] (t-30P11) -- (t-28P9);
+\draw[-latex] (t-31P11) -- (t-32P12);
+\draw[-latex] (t-31P11) -- (t-29P9);
+\draw[-latex] (t-32P11) -- (t-33P12);
+\draw[-latex] (t-32P11) -- (t-30P9);
+\draw[-latex] (t-33P11) -- (t-34P12);
+\draw[-latex] (t-34P11) -- (t-35P12);
+\draw[-latex] (t-35P11) -- (t-36P12);
+\draw[-latex] (t-0P12) -- (t-0P11);
+\draw[-latex] (t-0P12) -- (t-1P13);
+\draw[-latex] (t-1P12) -- (t-0P10);
+\draw[-latex] (t-1P12) -- (t-1P11);
+\draw[-latex] (t-1P12) -- (t-2P13);
+\draw[-latex] (t-2P12) -- (t-1P10);
+\draw[-latex] (t-2P12) -- (t-2P11);
+\draw[-latex] (t-2P12) -- (t-3P13);
+\draw[-latex] (t-3P12) -- (t-2P10);
+\draw[-latex] (t-3P12) -- (t-3P11);
+\draw[-latex] (t-3P12) -- (t-4P13);
+\draw[-latex] (t-4P12) -- (t-3P10);
+\draw[-latex] (t-4P12) -- (t-4P11);
+\draw[-latex] (t-4P12) -- (t-5P13);
+\draw[-latex] (t-5P12) -- (t-4P10);
+\draw[-latex] (t-5P12) -- (t-5P11);
+\draw[-latex] (t-5P12) -- (t-6P13);
+\draw[-latex] (t-6P12) -- (t-5P10);
+\draw[-latex] (t-6P12) -- (t-6P11);
+\draw[-latex] (t-6P12) -- (t-7P13);
+\draw[-latex] (t-7P12) -- (t-6P10);
+\draw[-latex] (t-7P12) -- (t-7P11);
+\draw[-latex] (t-7P12) -- (t-8P13);
+\draw[-latex] (t-8P12) -- (t-7P10);
+\draw[-latex] (t-8P12) -- (t-8P11);
+\draw[-latex] (t-8P12) -- (t-9P13);
+\draw[-latex] (t-9P12) -- (t-8P10);
+\draw[-latex] (t-9P12) -- (t-9P11);
+\draw[-latex] (t-9P12) -- (t-10P13);
+\draw[-latex] (t-10P12) -- (t-9P10);
+\draw[-latex] (t-10P12) -- (t-10P11);
+\draw[-latex] (t-10P12) -- (t-11P13);
+\draw[-latex] (t-11P12) -- (t-10P10);
+\draw[-latex] (t-11P12) -- (t-11P11);
+\draw[-latex] (t-11P12) -- (t-12P13);
+\draw[-latex] (t-12P12) -- (t-11P10);
+\draw[-latex] (t-12P12) -- (t-12P11);
+\draw[-latex] (t-12P12) -- (t-13P13);
+\draw[-latex] (t-13P12) -- (t-12P10);
+\draw[-latex] (t-13P12) -- (t-13P11);
+\draw[-latex] (t-13P12) -- (t-14P13);
+\draw[-latex] (t-14P12) -- (t-13P10);
+\draw[-latex] (t-14P12) -- (t-14P11);
+\draw[-latex] (t-14P12) -- (t-15P13);
+\draw[-latex] (t-15P12) -- (t-14P10);
+\draw[-latex] (t-15P12) -- (t-15P11);
+\draw[-latex] (t-15P12) -- (t-16P13);
+\draw[-latex] (t-16P12) -- (t-15P10);
+\draw[-latex] (t-16P12) -- (t-16P11);
+\draw[-latex] (t-16P12) -- (t-17P13);
+\draw[-latex] (t-17P12) -- (t-16P10);
+\draw[-latex] (t-17P12) -- (t-17P11);
+\draw[-latex] (t-17P12) -- (t-18P13);
+\draw[-latex] (t-18P12) -- (t-17P10);
+\draw[-latex] (t-18P12) -- (t-18P11);
+\draw[-latex] (t-18P12) -- (t-19P13);
+\draw[-latex] (t-19P12) -- (t-18P10);
+\draw[-latex] (t-19P12) -- (t-19P11);
+\draw[-latex] (t-19P12) -- (t-20P13);
+\draw[-latex] (t-20P12) -- (t-19P10);
+\draw[-latex] (t-20P12) -- (t-20P11);
+\draw[-latex] (t-20P12) -- (t-21P13);
+\draw[-latex] (t-21P12) -- (t-20P10);
+\draw[-latex] (t-21P12) -- (t-21P11);
+\draw[-latex] (t-21P12) -- (t-22P13);
+\draw[-latex] (t-22P12) -- (t-21P10);
+\draw[-latex] (t-22P12) -- (t-22P11);
+\draw[-latex] (t-22P12) -- (t-23P13);
+\draw[-latex] (t-23P12) -- (t-22P10);
+\draw[-latex] (t-23P12) -- (t-23P11);
+\draw[-latex] (t-23P12) -- (t-24P13);
+\draw[-latex] (t-24P12) -- (t-23P10);
+\draw[-latex] (t-24P12) -- (t-24P11);
+\draw[-latex] (t-24P12) -- (t-25P13);
+\draw[-latex] (t-25P12) -- (t-24P10);
+\draw[-latex] (t-25P12) -- (t-25P11);
+\draw[-latex] (t-25P12) -- (t-26P13);
+\draw[-latex] (t-26P12) -- (t-25P10);
+\draw[-latex] (t-26P12) -- (t-26P11);
+\draw[-latex] (t-26P12) -- (t-27P13);
+\draw[-latex] (t-27P12) -- (t-26P10);
+\draw[-latex] (t-27P12) -- (t-27P11);
+\draw[-latex] (t-27P12) -- (t-28P13);
+\draw[-latex] (t-28P12) -- (t-27P10);
+\draw[-latex] (t-28P12) -- (t-28P11);
+\draw[-latex] (t-28P12) -- (t-29P13);
+\draw[-latex] (t-29P12) -- (t-28P10);
+\draw[-latex] (t-29P12) -- (t-29P11);
+\draw[-latex] (t-29P12) -- (t-30P13);
+\draw[-latex] (t-30P12) -- (t-29P10);
+\draw[-latex] (t-30P12) -- (t-30P11);
+\draw[-latex] (t-30P12) -- (t-31P13);
+\draw[-latex] (t-31P12) -- (t-30P10);
+\draw[-latex] (t-31P12) -- (t-31P11);
+\draw[-latex] (t-31P12) -- (t-32P13);
+\draw[-latex] (t-32P12) -- (t-31P10);
+\draw[-latex] (t-32P12) -- (t-32P11);
+\draw[-latex] (t-32P12) -- (t-33P13);
+\draw[-latex] (t-33P12) -- (t-32P10);
+\draw[-latex] (t-33P12) -- (t-33P11);
+\draw[-latex] (t-33P12) -- (t-34P13);
+\draw[-latex] (t-34P12) -- (t-33P10);
+\draw[-latex] (t-34P12) -- (t-34P11);
+\draw[-latex] (t-34P12) -- (t-35P13);
+\draw[-latex] (t-35P12) -- (t-35P11);
+\draw[-latex] (t-35P12) -- (t-36P13);
+\draw[-latex] (t-36P12) -- (t-37P13);
+\draw[-latex] (t-0P13) -- (t-0P12);
+\draw[-latex] (t-0P13) -- (t-1P14);
+\draw[-latex] (t-1P13) -- (t-1P12);
+\draw[-latex] (t-1P13) -- (t-2P14);
+\draw[-latex] (t-2P13) -- (t-2P12);
+\draw[-latex] (t-2P13) -- (t-3P14);
+\draw[-latex] (t-3P13) -- (t-3P12);
+\draw[-latex] (t-3P13) -- (t-4P14);
+\draw[-latex] (t-4P13) -- (t-4P12);
+\draw[-latex] (t-4P13) -- (t-5P14);
+\draw[-latex] (t-5P13) -- (t-5P12);
+\draw[-latex] (t-5P13) -- (t-6P14);
+\draw[-latex] (t-6P13) -- (t-6P12);
+\draw[-latex] (t-6P13) -- (t-7P14);
+\draw[-latex] (t-7P13) -- (t-7P12);
+\draw[-latex] (t-7P13) -- (t-8P14);
+\draw[-latex] (t-8P13) -- (t-8P12);
+\draw[-latex] (t-8P13) -- (t-9P14);
+\draw[-latex] (t-9P13) -- (t-9P12);
+\draw[-latex] (t-9P13) -- (t-10P14);
+\draw[-latex] (t-10P13) -- (t-10P12);
+\draw[-latex] (t-10P13) -- (t-11P14);
+\draw[-latex] (t-11P13) -- (t-11P12);
+\draw[-latex] (t-11P13) -- (t-12P14);
+\draw[-latex] (t-12P13) -- (t-12P12);
+\draw[-latex] (t-12P13) -- (t-13P14);
+\draw[-latex] (t-13P13) -- (t-13P12);
+\draw[-latex] (t-13P13) -- (t-14P14);
+\draw[-latex] (t-14P13) -- (t-14P12);
+\draw[-latex] (t-14P13) -- (t-15P14);
+\draw[-latex] (t-15P13) -- (t-15P12);
+\draw[-latex] (t-15P13) -- (t-16P14);
+\draw[-latex] (t-16P13) -- (t-16P12);
+\draw[-latex] (t-16P13) -- (t-17P14);
+\draw[-latex] (t-17P13) -- (t-17P12);
+\draw[-latex] (t-17P13) -- (t-18P14);
+\draw[-latex] (t-18P13) -- (t-18P12);
+\draw[-latex] (t-18P13) -- (t-19P14);
+\draw[-latex] (t-19P13) -- (t-19P12);
+\draw[-latex] (t-19P13) -- (t-20P14);
+\draw[-latex] (t-20P13) -- (t-20P12);
+\draw[-latex] (t-20P13) -- (t-21P14);
+\draw[-latex] (t-21P13) -- (t-21P12);
+\draw[-latex] (t-21P13) -- (t-22P14);
+\draw[-latex] (t-22P13) -- (t-22P12);
+\draw[-latex] (t-22P13) -- (t-23P14);
+\draw[-latex] (t-23P13) -- (t-23P12);
+\draw[-latex] (t-23P13) -- (t-24P14);
+\draw[-latex] (t-24P13) -- (t-24P12);
+\draw[-latex] (t-24P13) -- (t-25P14);
+\draw[-latex] (t-25P13) -- (t-25P12);
+\draw[-latex] (t-25P13) -- (t-26P14);
+\draw[-latex] (t-26P13) -- (t-26P12);
+\draw[-latex] (t-26P13) -- (t-27P14);
+\draw[-latex] (t-27P13) -- (t-27P12);
+\draw[-latex] (t-27P13) -- (t-28P14);
+\draw[-latex] (t-28P13) -- (t-28P12);
+\draw[-latex] (t-28P13) -- (t-29P14);
+\draw[-latex] (t-29P13) -- (t-29P12);
+\draw[-latex] (t-29P13) -- (t-30P14);
+\draw[-latex] (t-30P13) -- (t-30P12);
+\draw[-latex] (t-30P13) -- (t-31P14);
+\draw[-latex] (t-31P13) -- (t-31P12);
+\draw[-latex] (t-31P13) -- (t-32P14);
+\draw[-latex] (t-32P13) -- (t-32P12);
+\draw[-latex] (t-32P13) -- (t-33P14);
+\draw[-latex] (t-33P13) -- (t-33P12);
+\draw[-latex] (t-33P13) -- (t-34P14);
+\draw[-latex] (t-34P13) -- (t-34P12);
+\draw[-latex] (t-34P13) -- (t-35P14);
+\draw[-latex] (t-35P13) -- (t-35P12);
+\draw[-latex] (t-35P13) -- (t-36P14);
+\draw[-latex] (t-36P13) -- (t-36P12);
+\draw[-latex] (t-36P13) -- (t-37P14);
+\draw[-latex] (t-37P13) -- (t-38P14);
+\draw[-latex] (t-0P14) -- (t-0P13);
+\draw[-latex] (t-1P14) -- (t-1P13);
+\draw[-latex] (t-2P14) -- (t-2P13);
+\draw[-latex] (t-3P14) -- (t-3P13);
+\draw[-latex] (t-4P14) -- (t-4P13);
+\draw[-latex] (t-5P14) -- (t-5P13);
+\draw[-latex] (t-6P14) -- (t-0P8);
+\draw[-latex] (t-6P14) -- (t-6P13);
+\draw[-latex] (t-7P14) -- (t-7P13);
+\draw[-latex] (t-7P14) -- (t-1P8);
+\draw[-latex] (t-8P14) -- (t-8P13);
+\draw[-latex] (t-9P14) -- (t-9P13);
+\draw[-latex] (t-10P14) -- (t-10P13);
+\draw[-latex] (t-11P14) -- (t-11P13);
+\draw[-latex] (t-12P14) -- (t-0P6);
+\draw[-latex] (t-12P14) -- (t-12P13);
+\draw[-latex] (t-13P14) -- (t-13P13);
+\draw[-latex] (t-13P14) -- (t-1P6);
+\draw[-latex] (t-14P14) -- (t-14P13);
+\draw[-latex] (t-15P14) -- (t-15P13);
+\draw[-latex] (t-16P14) -- (t-16P13);
+\draw[-latex] (t-17P14) -- (t-17P13);
+\draw[-latex] (t-18P14) -- (t-0P4);
+\draw[-latex] (t-18P14) -- (t-18P13);
+\draw[-latex] (t-19P14) -- (t-19P13);
+\draw[-latex] (t-19P14) -- (t-1P4);
+\draw[-latex] (t-20P14) -- (t-20P13);
+\draw[-latex] (t-21P14) -- (t-21P13);
+\draw[-latex] (t-22P14) -- (t-22P13);
+\draw[-latex] (t-23P14) -- (t-23P13);
+\draw[-latex] (t-24P14) -- (t-0P2);
+\draw[-latex] (t-24P14) -- (t-24P13);
+\draw[-latex] (t-25P14) -- (t-25P13);
+\draw[-latex] (t-25P14) -- (t-1P2);
+\draw[-latex] (t-26P14) -- (t-26P13);
+\draw[-latex] (t-27P14) -- (t-27P13);
+\draw[-latex] (t-28P14) -- (t-28P13);
+\draw[-latex] (t-29P14) -- (t-29P13);
+\draw[-latex] (t-30P14) -- (t-0P0);
+\draw[-latex] (t-30P14) -- (t-30P13);
+\draw[-latex] (t-31P14) -- (t-31P13);
+\draw[-latex] (t-31P14) -- (t-1P0);
+\draw[-latex] (t-32P14) -- (t-32P13);
+\draw[-latex] (t-33P14) -- (t-33P13);
+\draw[-latex] (t-34P14) -- (t-34P13);
+\draw[-latex] (t-35P14) -- (t-35P13);
+\draw[-latex] (t-36P14) -- (t-36P13);
+\draw[-latex] (t-37P14) -- (t-37P13);
+\draw[dashed] (t-0P0)--(t-1P0);
+\draw[dashed] (t-0P1)--(t-1P1);
+\draw[dashed] (t-0P2)--(t-1P2);
+\draw[dashed] (t-0P3)--(t-1P3);
+\draw[dashed] (t-0P4)--(t-1P4);
+\draw[dashed] (t-0P5)--(t-1P5);
+\draw[dashed] (t-0P6)--(t-1P6);
+\draw[dashed] (t-0P7)--(t-1P7);
+\draw[dashed] (t-0P8)--(t-1P8);
+\draw[dashed] (t-0P9)--(t-1P9);
+\draw[dashed] (t-1P9)--(t-2P9);
+\draw[dashed] (t-2P9)--(t-3P9);
+\draw[dashed] (t-3P9)--(t-4P9);
+\draw[dashed] (t-4P9)--(t-5P9);
+\draw[dashed] (t-5P9)--(t-6P9);
+\draw[dashed] (t-6P9)--(t-7P9);
+\draw[dashed] (t-7P9)--(t-8P9);
+\draw[dashed] (t-8P9)--(t-9P9);
+\draw[dashed] (t-9P9)--(t-10P9);
+\draw[dashed] (t-10P9)--(t-11P9);
+\draw[dashed] (t-11P9)--(t-12P9);
+\draw[dashed] (t-12P9)--(t-13P9);
+\draw[dashed] (t-13P9)--(t-14P9);
+\draw[dashed] (t-14P9)--(t-15P9);
+\draw[dashed] (t-15P9)--(t-16P9);
+\draw[dashed] (t-16P9)--(t-17P9);
+\draw[dashed] (t-17P9)--(t-18P9);
+\draw[dashed] (t-18P9)--(t-19P9);
+\draw[dashed] (t-19P9)--(t-20P9);
+\draw[dashed] (t-20P9)--(t-21P9);
+\draw[dashed] (t-21P9)--(t-22P9);
+\draw[dashed] (t-22P9)--(t-23P9);
+\draw[dashed] (t-23P9)--(t-24P9);
+\draw[dashed] (t-24P9)--(t-25P9);
+\draw[dashed] (t-25P9)--(t-26P9);
+\draw[dashed] (t-26P9)--(t-27P9);
+\draw[dashed] (t-27P9)--(t-28P9);
+\draw[dashed] (t-28P9)--(t-29P9);
+\draw[dashed] (t-29P9)--(t-30P9);
+\draw[dashed] (t-0P10)--(t-1P10);
+\draw[dashed] (t-1P10)--(t-2P10);
+\draw[dashed] (t-2P10)--(t-3P10);
+\draw[dashed] (t-3P10)--(t-4P10);
+\draw[dashed] (t-4P10)--(t-5P10);
+\draw[dashed] (t-5P10)--(t-6P10);
+\draw[dashed] (t-6P10)--(t-7P10);
+\draw[dashed] (t-7P10)--(t-8P10);
+\draw[dashed] (t-8P10)--(t-9P10);
+\draw[dashed] (t-9P10)--(t-10P10);
+\draw[dashed] (t-10P10)--(t-11P10);
+\draw[dashed] (t-11P10)--(t-12P10);
+\draw[dashed] (t-12P10)--(t-13P10);
+\draw[dashed] (t-13P10)--(t-14P10);
+\draw[dashed] (t-14P10)--(t-15P10);
+\draw[dashed] (t-15P10)--(t-16P10);
+\draw[dashed] (t-16P10)--(t-17P10);
+\draw[dashed] (t-17P10)--(t-18P10);
+\draw[dashed] (t-18P10)--(t-19P10);
+\draw[dashed] (t-19P10)--(t-20P10);
+\draw[dashed] (t-20P10)--(t-21P10);
+\draw[dashed] (t-21P10)--(t-22P10);
+\draw[dashed] (t-22P10)--(t-23P10);
+\draw[dashed] (t-23P10)--(t-24P10);
+\draw[dashed] (t-24P10)--(t-25P10);
+\draw[dashed] (t-25P10)--(t-26P10);
+\draw[dashed] (t-26P10)--(t-27P10);
+\draw[dashed] (t-27P10)--(t-28P10);
+\draw[dashed] (t-28P10)--(t-29P10);
+\draw[dashed] (t-29P10)--(t-30P10);
+\draw[dashed] (t-30P10)--(t-31P10);
+\draw[dashed] (t-31P10)--(t-32P10);
+\draw[dashed] (t-32P10)--(t-33P10);
+\draw[dashed] (t-0P11)--(t-1P11);
+\draw[dashed] (t-1P11)--(t-2P11);
+\draw[dashed] (t-2P11)--(t-3P11);
+\draw[dashed] (t-3P11)--(t-4P11);
+\draw[dashed] (t-4P11)--(t-5P11);
+\draw[dashed] (t-5P11)--(t-6P11);
+\draw[dashed] (t-6P11)--(t-7P11);
+\draw[dashed] (t-7P11)--(t-8P11);
+\draw[dashed] (t-8P11)--(t-9P11);
+\draw[dashed] (t-9P11)--(t-10P11);
+\draw[dashed] (t-10P11)--(t-11P11);
+\draw[dashed] (t-11P11)--(t-12P11);
+\draw[dashed] (t-12P11)--(t-13P11);
+\draw[dashed] (t-13P11)--(t-14P11);
+\draw[dashed] (t-14P11)--(t-15P11);
+\draw[dashed] (t-15P11)--(t-16P11);
+\draw[dashed] (t-16P11)--(t-17P11);
+\draw[dashed] (t-17P11)--(t-18P11);
+\draw[dashed] (t-18P11)--(t-19P11);
+\draw[dashed] (t-19P11)--(t-20P11);
+\draw[dashed] (t-20P11)--(t-21P11);
+\draw[dashed] (t-21P11)--(t-22P11);
+\draw[dashed] (t-22P11)--(t-23P11);
+\draw[dashed] (t-23P11)--(t-24P11);
+\draw[dashed] (t-24P11)--(t-25P11);
+\draw[dashed] (t-25P11)--(t-26P11);
+\draw[dashed] (t-26P11)--(t-27P11);
+\draw[dashed] (t-27P11)--(t-28P11);
+\draw[dashed] (t-28P11)--(t-29P11);
+\draw[dashed] (t-29P11)--(t-30P11);
+\draw[dashed] (t-30P11)--(t-31P11);
+\draw[dashed] (t-31P11)--(t-32P11);
+\draw[dashed] (t-32P11)--(t-33P11);
+\draw[dashed] (t-33P11)--(t-34P11);
+\draw[dashed] (t-34P11)--(t-35P11);
+\draw[dashed] (t-0P12)--(t-1P12);
+\draw[dashed] (t-1P12)--(t-2P12);
+\draw[dashed] (t-2P12)--(t-3P12);
+\draw[dashed] (t-3P12)--(t-4P12);
+\draw[dashed] (t-4P12)--(t-5P12);
+\draw[dashed] (t-5P12)--(t-6P12);
+\draw[dashed] (t-6P12)--(t-7P12);
+\draw[dashed] (t-7P12)--(t-8P12);
+\draw[dashed] (t-8P12)--(t-9P12);
+\draw[dashed] (t-9P12)--(t-10P12);
+\draw[dashed] (t-10P12)--(t-11P12);
+\draw[dashed] (t-11P12)--(t-12P12);
+\draw[dashed] (t-12P12)--(t-13P12);
+\draw[dashed] (t-13P12)--(t-14P12);
+\draw[dashed] (t-14P12)--(t-15P12);
+\draw[dashed] (t-15P12)--(t-16P12);
+\draw[dashed] (t-16P12)--(t-17P12);
+\draw[dashed] (t-17P12)--(t-18P12);
+\draw[dashed] (t-18P12)--(t-19P12);
+\draw[dashed] (t-19P12)--(t-20P12);
+\draw[dashed] (t-20P12)--(t-21P12);
+\draw[dashed] (t-21P12)--(t-22P12);
+\draw[dashed] (t-22P12)--(t-23P12);
+\draw[dashed] (t-23P12)--(t-24P12);
+\draw[dashed] (t-24P12)--(t-25P12);
+\draw[dashed] (t-25P12)--(t-26P12);
+\draw[dashed] (t-26P12)--(t-27P12);
+\draw[dashed] (t-27P12)--(t-28P12);
+\draw[dashed] (t-28P12)--(t-29P12);
+\draw[dashed] (t-29P12)--(t-30P12);
+\draw[dashed] (t-30P12)--(t-31P12);
+\draw[dashed] (t-31P12)--(t-32P12);
+\draw[dashed] (t-32P12)--(t-33P12);
+\draw[dashed] (t-33P12)--(t-34P12);
+\draw[dashed] (t-34P12)--(t-35P12);
+\draw[dashed] (t-35P12)--(t-36P12);
+\draw[dashed] (t-0P13)--(t-1P13);
+\draw[dashed] (t-1P13)--(t-2P13);
+\draw[dashed] (t-2P13)--(t-3P13);
+\draw[dashed] (t-3P13)--(t-4P13);
+\draw[dashed] (t-4P13)--(t-5P13);
+\draw[dashed] (t-5P13)--(t-6P13);
+\draw[dashed] (t-6P13)--(t-7P13);
+\draw[dashed] (t-7P13)--(t-8P13);
+\draw[dashed] (t-8P13)--(t-9P13);
+\draw[dashed] (t-9P13)--(t-10P13);
+\draw[dashed] (t-10P13)--(t-11P13);
+\draw[dashed] (t-11P13)--(t-12P13);
+\draw[dashed] (t-12P13)--(t-13P13);
+\draw[dashed] (t-13P13)--(t-14P13);
+\draw[dashed] (t-14P13)--(t-15P13);
+\draw[dashed] (t-15P13)--(t-16P13);
+\draw[dashed] (t-16P13)--(t-17P13);
+\draw[dashed] (t-17P13)--(t-18P13);
+\draw[dashed] (t-18P13)--(t-19P13);
+\draw[dashed] (t-19P13)--(t-20P13);
+\draw[dashed] (t-20P13)--(t-21P13);
+\draw[dashed] (t-21P13)--(t-22P13);
+\draw[dashed] (t-22P13)--(t-23P13);
+\draw[dashed] (t-23P13)--(t-24P13);
+\draw[dashed] (t-24P13)--(t-25P13);
+\draw[dashed] (t-25P13)--(t-26P13);
+\draw[dashed] (t-26P13)--(t-27P13);
+\draw[dashed] (t-27P13)--(t-28P13);
+\draw[dashed] (t-28P13)--(t-29P13);
+\draw[dashed] (t-29P13)--(t-30P13);
+\draw[dashed] (t-30P13)--(t-31P13);
+\draw[dashed] (t-31P13)--(t-32P13);
+\draw[dashed] (t-32P13)--(t-33P13);
+\draw[dashed] (t-33P13)--(t-34P13);
+\draw[dashed] (t-34P13)--(t-35P13);
+\draw[dashed] (t-35P13)--(t-36P13);
+\draw[dashed] (t-36P13)--(t-37P13);
+\draw[dashed] (t-0P14)--(t-1P14);
+\draw[dashed] (t-1P14)--(t-2P14);
+\draw[dashed] (t-2P14)--(t-3P14);
+\draw[dashed] (t-3P14)--(t-4P14);
+\draw[dashed] (t-4P14)--(t-5P14);
+\draw[dashed] (t-5P14)--(t-6P14);
+\draw[dashed] (t-6P14)--(t-7P14);
+\draw[dashed] (t-7P14)--(t-8P14);
+\draw[dashed] (t-8P14)--(t-9P14);
+\draw[dashed] (t-9P14)--(t-10P14);
+\draw[dashed] (t-10P14)--(t-11P14);
+\draw[dashed] (t-11P14)--(t-12P14);
+\draw[dashed] (t-12P14)--(t-13P14);
+\draw[dashed] (t-13P14)--(t-14P14);
+\draw[dashed] (t-14P14)--(t-15P14);
+\draw[dashed] (t-15P14)--(t-16P14);
+\draw[dashed] (t-16P14)--(t-17P14);
+\draw[dashed] (t-17P14)--(t-18P14);
+\draw[dashed] (t-18P14)--(t-19P14);
+\draw[dashed] (t-19P14)--(t-20P14);
+\draw[dashed] (t-20P14)--(t-21P14);
+\draw[dashed] (t-21P14)--(t-22P14);
+\draw[dashed] (t-22P14)--(t-23P14);
+\draw[dashed] (t-23P14)--(t-24P14);
+\draw[dashed] (t-24P14)--(t-25P14);
+\draw[dashed] (t-25P14)--(t-26P14);
+\draw[dashed] (t-26P14)--(t-27P14);
+\draw[dashed] (t-27P14)--(t-28P14);
+\draw[dashed] (t-28P14)--(t-29P14);
+\draw[dashed] (t-29P14)--(t-30P14);
+\draw[dashed] (t-30P14)--(t-31P14);
+\draw[dashed] (t-31P14)--(t-32P14);
+\draw[dashed] (t-32P14)--(t-33P14);
+\draw[dashed] (t-33P14)--(t-34P14);
+\draw[dashed] (t-34P14)--(t-35P14);
+\draw[dashed] (t-35P14)--(t-36P14);
+\draw[dashed] (t-36P14)--(t-37P14);
+\draw[dashed] (t-37P14)--(t-38P14);
+\end{tikzpicture}\end{document}
