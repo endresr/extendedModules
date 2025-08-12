@@ -120,3 +120,4 @@ def checkRelations(n,rel):
         return None
     else:
         return sortedRel
+

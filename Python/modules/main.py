@@ -12,6 +12,7 @@ Limitations:
 from classes import *
 from functions import *
 from drawGraph import *
+from tauFunction import tauInv
 from datetime import datetime
 
 
@@ -23,9 +24,9 @@ Initial variables
 
 n=13 #Number of vertices
 m=2 #how extended the module category is
-l=None #integer if you want relations Rad^l, None if you want to define your own relations
 
-rel = [(0,9),(3,12)] #list of minimal zero-relations, given through the vertices they start and end in
+
+rel = 2 #[(0,9),(3,12)] # l-integer if homogeneous relations Rad^l or a list of minimal zero-relations, given through the vertices they start and end in 
 cutOffIterations = 100 #How many times do the while loop run before we give up?
 
 #Note that quivers are zero-indexed, i.e. Q_n: 0 -> 1 -> ... -> (n-1)
@@ -38,41 +39,19 @@ generateLatex = True #Set to False if you do not want to generate Latex-file
 compileToPDF = True #Set to False if you do not want to automatically compile pdf
 
 '''
-Defining the tau-function
-'''
-
-def tauInv(X,projectives,radicalOfProjectives,dimProjectives,dimInjectives,n,m,modules):
-    if X.radicalOfProjective != None:
-        #Note the following only works when the radicals are indecomposable
-        X.irrTo.append(projectives[X.radicalOfProjective])
-        projectives[X.radicalOfProjective].irrFrom.append(X)
-        projectives[X.radicalOfProjective].xcoord = X.xcoord+1
-    for N in [Y for Y in X.irrFrom if Y.injective == None]:
-        X.irrTo.append(N.tauInv)
-        N.tauInv.irrFrom.append(X)
-    if X.injectiveShift[0] == None:
-        tempHomologies = -X.homologies
-        for N in X.irrTo:
-            tempHomologies = tempHomologies+N.homologies
-        tauInverse = extendedModule(tempHomologies,n,m,dimProjectives,dimInjectives,radicalOfProjectives)
-        tauInverse.xcoord = X.xcoord+2
-        X.tauInv = tauInverse
-        modules.append(tauInverse)
-    elif X.injective == None:
-        tempHomologies = np.append(np.zeros((X.injectiveShift[0]+1,n)),[dimProjectives[X.injectiveShift[1]]],axis=0)
-        tempHomologies = np.append(tempHomologies,np.zeros((m-X.injectiveShift[0]-2,n)),axis=0)
-        tauInverse = extendedModule(tempHomologies,n,m,dimProjectives,dimInjectives,radicalOfProjectives)
-        tauInverse.xcoord = X.xcoord+2
-        X.tauInv = tauInverse
-        modules.append(tauInverse)
-    return 
-
-'''
 The main loop
 '''
 
 def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputName=None,outputLatex=True,compileLatex=True):
-    relations = checkRelations(n,rel)
+    SetOutputName = outputName
+    if isinstance(rel, int):
+        relationsInput = [(i,i+rel) for i in range(n-rel)]
+        if outputName == None:
+            SetOutputName = "HomogeneousNakayama_n="+str(n)+"_m="+str(m)+"_l="+str(rel)
+    else:
+        relationsInput = rel
+        
+    relations = checkRelations(n,relationsInput)
     if relations == None:
         print("The relations are not in accepted form")
         return None
@@ -85,8 +64,8 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
     #Initial calculations
     
 
-    dimProjectives,radicalOfProjectives = findProjectivesDim(n,rel) 
-    dimInjectives = findInjectiveDim(n,rel)[::-1]
+    dimProjectives,radicalOfProjectives = findProjectivesDim(n,relations) 
+    dimInjectives = findInjectiveDim(n,relations)[::-1]
 
     homologiesOfProjectives = findHomologyOfProjectives(dimProjectives,n,m)
     projectiveModules = [extendedModule(x,n,m,dimProjectives,dimInjectives,radicalOfProjectives) for x in homologiesOfProjectives]
@@ -157,13 +136,13 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
 
     xMidway=xMax/2
     yMax = max(yLevelsTauOrbits)+1
-    TikzLabel = r'\node at (' + str(xMidway)+ ','+ str(yMax)+') [] '+r'{$'+str(m)+"$-mod of linear Nakayama with "+str(n)+" vertices and relations "+str(rel) +r'};'+'\n'
+    TikzLabel = r'\node at (' + str(xMidway)+ ','+ str(yMax)+') [] '+r'{$'+str(m)+"$-mod of linear Nakayama with "+str(n)+" vertices and relations "+str(relations) +r'};'+'\n'
     stringToSave = preLatex + preTikz(tikzScale)+TikzLabel +TikzNodes+TikzIrrArrows+TikzTauArrows+postTikz+postLatex
     currentTime = datetime.today().strftime('%Y-%m-%d')
-    if outputName == None:
+    if SetOutputName == None:
         texFileName = "_Nakayama_n="+str(n)+"_m="+str(m)
     else:
-        texFileName = outputName
+        texFileName = SetOutputName
     outputDirectory = "./Python/modules/outputLatexFiles/"
     fileName =outputDirectory+currentTime+texFileName+".tex"
     if outputLatex:
@@ -176,11 +155,6 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
     print("We found "+str(calculatedModules)+" "+str(m)+"-modules of the algebra.")
     return tauOrbits
 
-if l != None:
-    relationsInput = [(i,i+l) for i in range(n-l)]
-    if setOutputName == None:
-        setOutputName = "HomogeneousNakayama_n="+str(n)+"_m="+str(m)+"_l="+str(l)
-else:
-    relationsInput = rel
 
-tauOrbits=mainLoop(n,relationsInput,m,cutOffIterations,yLevels,tikzScale,nodeScale,setOutputName,generateLatex,compileToPDF)
+
+tauOrbits=mainLoop(n,rel,m,cutOffIterations,yLevels,tikzScale,nodeScale,setOutputName,generateLatex,compileToPDF)
