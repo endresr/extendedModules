@@ -30,19 +30,20 @@ cutOffIterations = 100 #How many times do the while loop run before we give up?
 #Note that quivers are zero-indexed, i.e. Q_n: 0 -> 1 -> ... -> (n-1)
 
 yLevels = [-2,-2,-2,-1,6,5,4,3,2,1,0] #Set the y-level which the tauOrbits of each projective is drawn
-tikzScale = (4,2) #The x- and y-scale of the tikz diagram
+tikzScale = (.5,.8) #The x- and y-scale of the tikz diagram
 nodeScale = 1 #The scale of each node in the tikz diagram
 setOutputName = None #String with your prefered name for Latex-file
 generateLatex = True #Set to False if you do not want to generate Latex-file
 compileToPDF = True #Set to False if you do not want to automatically compile pdf
 highlightConcentradedHomology = True #Set to False if you do not want to highlight nodes with concentrated homology
 drawOnlyCircles = True #Set to False if you want the homologies printed as node labels
+printDiagramTitle = False
 
 '''
 The main loop
 '''
 
-def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputName=None,outputLatex=True,compileLatex=True,hightlightConcHom=False,drawCircles=False):
+def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputName=None,outputLatex=True,compileLatex=True,hightlightConcHom=False,drawCircles=False,printLabel=True):
     SetOutputName = outputName
     if isinstance(rel, int):
         relationsInput = [(i,i+rel) for i in range(n-rel)]
@@ -136,7 +137,10 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
     xMidway=xMax/2
     yMax = max(yLevelsTauOrbits)+1
     TikzLabel = r'\node at (' + str(xMidway)+ ','+ str(yMax)+') [] '+r'{$'+str(m)+"$-mod of linear Nakayama with "+str(n)+" vertices and relations "+str(relations) +r'};'+'\n'
-    stringToSave = preLatex + preTikz(tikzScale)+TikzLabel +TikzNodes+TikzIrrArrows+TikzTauArrows+postTikz+postLatex
+    if printLabel:
+        stringToSave = preLatex + preTikz(tikzScale)+TikzLabel +TikzNodes+TikzIrrArrows+TikzTauArrows+postTikz+postLatex
+    else:
+        stringToSave = preLatex + preTikz(tikzScale)+TikzNodes+TikzIrrArrows+TikzTauArrows+postTikz+postLatex
     currentTime = datetime.today().strftime('%Y-%m-%d')
     if SetOutputName == None:
         texFileName = "_Nakayama_n="+str(n)+"_m="+str(m)
@@ -156,6 +160,6 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
 
 
 
-tauOrbits,modules=mainLoop(n,rel,m,cutOffIterations,yLevels,tikzScale,nodeScale,setOutputName,generateLatex,compileToPDF,highlightConcentradedHomology,drawOnlyCircles)
+tauOrbits,modules=mainLoop(n,rel,m,cutOffIterations,yLevels,tikzScale,nodeScale,setOutputName,generateLatex,compileToPDF,highlightConcentradedHomology,drawOnlyCircles,printDiagramTitle)
 
 print(tauOrbits[-1][-1])

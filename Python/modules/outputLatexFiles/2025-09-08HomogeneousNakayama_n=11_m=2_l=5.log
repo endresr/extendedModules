@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.6)  8 SEP 2025 08:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.6)  8 SEP 2025 08:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -500,18 +500,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+]
 (./Python/modules/outputLatexFiles//2025-09-08HomogeneousNakayama_n=11_m=2_l=5.
 aux)
  ***********
@@ -520,19 +512,19 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 16217 strings out of 473201
- 319354 string characters out of 5716121
- 1083283 words of memory out of 5000000
- 39230 multiletter control sequences out of 15000+600000
- 560536 words of font info for 44 fonts, out of 8000000 for 9000
+ 16174 strings out of 473201
+ 318598 string characters out of 5716121
+ 1072817 words of memory out of 5000000
+ 39201 multiletter control sequences out of 15000+600000
+ 558837 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,7n,107p,495b,640s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+
 Output written on ./Python/modules/outputLatexFiles//2025-09-08HomogeneousNakay
-ama_n=11_m=2_l=5.pdf (1 page, 51789 bytes).
+ama_n=11_m=2_l=5.pdf (1 page, 32845 bytes).
 PDF statistics:
- 16 PDF objects out of 1000 (max. 8388607)
- 10 compressed objects within 1 object stream
+ 11 PDF objects out of 1000 (max. 8388607)
+ 7 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
