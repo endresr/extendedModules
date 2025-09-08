@@ -1,10 +1,11 @@
 # Initial data
 
-Q:=Quiver(["v1","v2","v3","v4","v5","v6","v7","v8","v9","v10","v11","v12","v13"],
-[["v1","v2","a"],["v2","v3","b"],["v3","v4","c"],["v4","v5","d"],["v5","v6","e"],["v6","v7","f"],["v7","v8","g"],["v8","v9","h"],["v9","v10","i"],["v10","v11","j"],["v11","v12","k"],["v12","v13","l"]]);
+Q:=Quiver(["v1","v2","v3","v4","v5","v6","v7","v8","v9"],
+[["v1","v2","a"],["v2","v3","b"],["v3","v4","c"],["v4","v5","d"],["v5","v6","e"],["v6","v7","f"],["v7","v8","g"],["v8","v9","h"]]);
+
 KQ:=PathAlgebra(GF(47),Q);
 AssignGeneratorVariables(KQ);
-relns:=[a*b*c*d*e*f*g*h*i,d*e*f*g*h*i*j*k*l];
+relns:=[a*b*c*d*e*f*g,b*c*d*e*f*g*h];
 A:=KQ/relns;
 cat := CatOfRightAlgebraModules(A);
 
@@ -18,9 +19,9 @@ I6:=IndecInjectiveModules(A)[6];
 I7:=IndecInjectiveModules(A)[7];
 I8:=IndecInjectiveModules(A)[8];
 I9:=IndecInjectiveModules(A)[9];
-I10:=IndecInjectiveModules(A)[10];
-I11:=IndecInjectiveModules(A)[11];
-I12:=IndecInjectiveModules(A)[12];
+#I10:=IndecInjectiveModules(A)[10];
+#I11:=IndecInjectiveModules(A)[11];
+#I12:=IndecInjectiveModules(A)[12];
 
 P1:=IndecProjectiveModules(A)[1];
 P2:=IndecProjectiveModules(A)[2];
@@ -31,9 +32,9 @@ P6:=IndecProjectiveModules(A)[6];
 P7:=IndecProjectiveModules(A)[7];
 P8:=IndecProjectiveModules(A)[8];
 P9:=IndecProjectiveModules(A)[9];
-P10:=IndecProjectiveModules(A)[10];
-P11:=IndecProjectiveModules(A)[11];
-P12:=IndecProjectiveModules(A)[12];
+#P10:=IndecProjectiveModules(A)[10];
+#P11:=IndecProjectiveModules(A)[11];
+#P12:=IndecProjectiveModules(A)[12];
 
 
 S1:=SimpleModules(A)[1];
@@ -44,6 +45,9 @@ S5:=SimpleModules(A)[5];
 S6:=SimpleModules(A)[6];
 S7:=SimpleModules(A)[7];
 S8:=SimpleModules(A)[8];
+S9:=SimpleModules(A)[9];
+#S10:=SimpleModules(A)[10];
+#S11:=SimpleModules(A)[11];
 
 
 M12:=Range(AlmostSplitSequence(S1)[1]);
@@ -53,6 +57,8 @@ M45:=Range(AlmostSplitSequence(S4)[1]);
 M56:=Range(AlmostSplitSequence(S5)[1]);
 M67:=Range(AlmostSplitSequence(S6)[1]);
 M78:=Range(AlmostSplitSequence(S7)[1]);
+#M89:=Range(AlmostSplitSequence(S8)[1]);
+#M910:=Range(AlmostSplitSequence(S9)[1]);
 
 
 
@@ -179,22 +185,25 @@ middleOfSequenceTemp := function(x,y)
 end;
 
 printFirstHomologies := function(C)
-	local h0,h1,h2,h3;
+	local h0,h1,h2,h3,h4;
 	
 	#h0 := List(DecomposeModuleViaCharPoly(homologyOfComplex(C,0)), a-> DimensionVector(a));
 	#h1 := List(DecomposeModuleViaCharPoly(homologyOfComplex(C,1)), a-> DimensionVector(a));
 	#h2 := List(DecomposeModuleViaCharPoly(homologyOfComplex(C,2)), a-> DimensionVector(a));
 	#h3 := List(DecomposeModuleViaCharPoly(homologyOfComplex(C,3)), a-> DimensionVector(a));
+	#h3 := List(DecomposeModuleViaCharPoly(homologyOfComplex(C,4)), a-> DimensionVector(a));
 	
 	h0 := DimensionVector(homologyOfComplex(C,0));
 	h1 := DimensionVector(homologyOfComplex(C,1));
 	h2 := DimensionVector(homologyOfComplex(C,2));
 	h3 := DimensionVector(homologyOfComplex(C,3));
+	h4 := DimensionVector(homologyOfComplex(C,4));
 	
 	Print("0th homology: ",h0,"\n");
 	Print("1st homology: ",h1,"\n");
 	Print("2nd homology: ",h2,"\n");
-	#Print("3rd homology: ",h3,"\n");
+	Print("3rd homology: ",h3,"\n");
+	Print("4th homology: ",h4,"\n");
 	
 	return C;
 end;

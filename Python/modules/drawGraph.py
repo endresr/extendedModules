@@ -39,8 +39,20 @@ def bmatrix(a):
     
     return '\n'.join(rv)
 
-def drawNodes(M,x,y,scale=1):
-    node =r'\node (' + M.id +') at (' + str(x)+ ','+ str(y)+') [scale='+str(scale)+'] '+r'{$'+bmatrix(M.homologies[::].astype(np.int64))+r'$};'+'\n'
+def drawNodes(M,x,y,scale=1,highlightConcHom=False,drawOnlyCircles=False):
+    node = r'\node (' + M.id +') at (' + str(x)+ ','+ str(y)+') [scale='+str(scale)
+    circleNode = r',draw,fill,circle,inner sep=0pt,minimum size=4pt] {};' +'\n'
+    matrixNode =  r'] {$'+bmatrix(M.homologies[::].astype(np.int64))+r'$};'+'\n'
+    if M.concentratedHomology != None and highlightConcHom:
+        if drawOnlyCircles:
+            node = node + ",red" + circleNode
+        else:
+            node = node + ',rectangle,draw=red,line width=2pt'+matrixNode
+    else:
+        if drawOnlyCircles:
+            node = node + circleNode
+        else:
+            node = node + matrixNode
     return node
 
 def drawIrrArrows(M):
