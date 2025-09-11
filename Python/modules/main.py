@@ -3,11 +3,7 @@ Code for finding AR-quiver of extended module categories of linear Nakayama alge
 
  0 -> 1 -> -> 2 -> ... -> n-1
 
-Prints Latex code for the AR-quiver and compiles it into the folder outputLatexFiles. The nodes are the homologies of the modules, represented as matrices with the ith homology in the -ith row
- 
-Limitations:
-- Radical check only works if the radical is indecomposable
-- Finding projectives and injectives only works for linear nakayama
+Prints Latex code for the AR-quiver and compiles it into the folder outputLatexFiles. 
 '''
 from classes import *
 from functions import *
@@ -22,21 +18,21 @@ import numpy as np
 Initial variables
 '''
 
-n=11 #Number of vertices
-m=2 #how extended the module category is
-rel = 5 #[(0,9),(3,12)] # l-integer if homogeneous relations Rad^l, or a list of minimal zero-relations given through the vertices they start and end in 
-cutOffIterations = 100 #How many times do the while loop run before we give up?
+n=8 #Number of vertices
+m=4 #how extended the module category is
+rel = 3 #[(0,9),(3,12)] # l-integer if homogeneous relations Rad^l, or a list of minimal zero-relations given through the vertices they start and end in 
+cutOffIterations = 200 #How many times do the while loop run before we give up?
 
 #Note that quivers are zero-indexed, i.e. Q_n: 0 -> 1 -> ... -> (n-1)
 
-yLevels = [-2,-2,-2,-1,6,5,4,3,2,1,0] #Set the y-level which the tauOrbits of each projective is drawn
-tikzScale = (.5,.8) #The x- and y-scale of the tikz diagram
+yLevels = [-3,-2,-1,4,3,2,1,0] #Set the y-level which the tauOrbits of each projective is drawn
+tikzScale = (4,2) #The x- and y-scale of the tikz diagram, Recommended: (4,2) works well for most instances when printing homology
 nodeScale = 1 #The scale of each node in the tikz diagram
 setOutputName = None #String with your prefered name for Latex-file
 generateLatex = True #Set to False if you do not want to generate Latex-file
 compileToPDF = True #Set to False if you do not want to automatically compile pdf
-highlightConcentradedHomology = True #Set to False if you do not want to highlight nodes with concentrated homology
-drawOnlyCircles = True #Set to False if you want the homologies printed as node labels
+highlightConcentradedHomology = False #Set to False if you do not want to highlight nodes with concentrated homology
+drawOnlyCircles = False #Set to False if you want the homologies printed as node labels
 printDiagramTitle = False
 
 '''
@@ -54,7 +50,7 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
         
     relations = checkRelations(n,relationsInput)
     if relations == None:
-        print("The relations are not in accepted form")
+        print(f"\033[1;31m The relations are not in accepted form \033[0m")
         return None
     if yLevels==None or len(yLevels)<n:
         print("Using standard ylevels")
@@ -80,7 +76,7 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
     for i in range(len(dimProjectives)):
         if np.dot(dimProjectives[i],tempVect)==1:
             Next.append(projectiveModules[i]) #Setting our beginning to the simple projectives
-            projectiveModules[i].xcoord = 0 #Setting the simple projectives x-coordinate to 0 TODO: Find how to manage for algebras with more than one simple projective
+            projectiveModules[i].xcoord = 0 #Setting the simple projectives x-coordinate to 0 
     
     counter=1
     notFinishedARquiver = False
@@ -96,7 +92,7 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
         Next=list( dict.fromkeys(tempNext) )
         counter+=1
         if counter>=cutOff and len(Next)>0:
-            print("Reached cutoff-value before finishing.")
+            print(f"\033[1;31m Reached cutoff-value before finishing.\033[0m")
             notFinishedARquiver = True
         if continueLoop == False and len(Next)>0:
             print("Error: Homologies are non-positive")
@@ -154,12 +150,10 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
         if compileLatex:
             compile_latex(fileName,outputDirectory)
     if notFinishedARquiver:
-        print("ERROR: The auslander reiten sequence was not fully calculated.")
-    print("We found "+str(calculatedModules)+" "+str(m)+"-modules of the algebra.")
+        print(f"\033[1;31m ERROR: The auslander reiten sequence was not fully calculated.\033[0m")
+    print(f"\033[1;32m We found "+str(calculatedModules)+" "+str(m)+"-modules of the algebra.\033[m")
     return tauOrbits,modules
 
 
 
 tauOrbits,modules=mainLoop(n,rel,m,cutOffIterations,yLevels,tikzScale,nodeScale,setOutputName,generateLatex,compileToPDF,highlightConcentradedHomology,drawOnlyCircles,printDiagramTitle)
-
-print(tauOrbits[-1][-1])

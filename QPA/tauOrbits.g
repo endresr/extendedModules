@@ -1,11 +1,11 @@
 # Initial data
 
-Q:=Quiver(["v1","v2","v3","v4","v5","v6","v7","v8","v9"],
-[["v1","v2","a"],["v2","v3","b"],["v3","v4","c"],["v4","v5","d"],["v5","v6","e"],["v6","v7","f"],["v7","v8","g"],["v8","v9","h"]]);
+Q:=Quiver(["v1","v2","v3","v4","v5","v6"],
+[["v1","v2","a"],["v2","v3","b"],["v3","v4","c"],["v4","v5","d"],["v5","v6","e"]]);
 
 KQ:=PathAlgebra(GF(47),Q);
 AssignGeneratorVariables(KQ);
-relns:=[a*b*c*d*e*f*g,b*c*d*e*f*g*h];
+relns:=[a*b*c,b*c*d,c*d*e];
 A:=KQ/relns;
 cat := CatOfRightAlgebraModules(A);
 
@@ -16,9 +16,9 @@ I3:=IndecInjectiveModules(A)[3];
 I4:=IndecInjectiveModules(A)[4];
 I5:=IndecInjectiveModules(A)[5];
 I6:=IndecInjectiveModules(A)[6];
-I7:=IndecInjectiveModules(A)[7];
-I8:=IndecInjectiveModules(A)[8];
-I9:=IndecInjectiveModules(A)[9];
+#I7:=IndecInjectiveModules(A)[7];
+#I8:=IndecInjectiveModules(A)[8];
+#I9:=IndecInjectiveModules(A)[9];
 #I10:=IndecInjectiveModules(A)[10];
 #I11:=IndecInjectiveModules(A)[11];
 #I12:=IndecInjectiveModules(A)[12];
@@ -29,9 +29,9 @@ P3:=IndecProjectiveModules(A)[3];
 P4:=IndecProjectiveModules(A)[4];
 P5:=IndecProjectiveModules(A)[5];
 P6:=IndecProjectiveModules(A)[6];
-P7:=IndecProjectiveModules(A)[7];
-P8:=IndecProjectiveModules(A)[8];
-P9:=IndecProjectiveModules(A)[9];
+#P7:=IndecProjectiveModules(A)[7];
+#P8:=IndecProjectiveModules(A)[8];
+#P9:=IndecProjectiveModules(A)[9];
 #P10:=IndecProjectiveModules(A)[10];
 #P11:=IndecProjectiveModules(A)[11];
 #P12:=IndecProjectiveModules(A)[12];
@@ -43,9 +43,9 @@ S3:=SimpleModules(A)[3];
 S4:=SimpleModules(A)[4];
 S5:=SimpleModules(A)[5];
 S6:=SimpleModules(A)[6];
-S7:=SimpleModules(A)[7];
-S8:=SimpleModules(A)[8];
-S9:=SimpleModules(A)[9];
+#S7:=SimpleModules(A)[7];
+#S8:=SimpleModules(A)[8];
+#S9:=SimpleModules(A)[9];
 #S10:=SimpleModules(A)[10];
 #S11:=SimpleModules(A)[11];
 
@@ -55,8 +55,8 @@ M23:=Range(AlmostSplitSequence(S2)[1]);
 M34:=Range(AlmostSplitSequence(S3)[1]);
 M45:=Range(AlmostSplitSequence(S4)[1]);
 M56:=Range(AlmostSplitSequence(S5)[1]);
-M67:=Range(AlmostSplitSequence(S6)[1]);
-M78:=Range(AlmostSplitSequence(S7)[1]);
+#M67:=Range(AlmostSplitSequence(S6)[1]);
+#M78:=Range(AlmostSplitSequence(S7)[1]);
 #M89:=Range(AlmostSplitSequence(S8)[1]);
 #M910:=Range(AlmostSplitSequence(S9)[1]);
 
