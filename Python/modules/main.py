@@ -18,15 +18,15 @@ import numpy as np
 Initial variables
 '''
 
-n=8 #Number of vertices
-m=4 #how extended the module category is
-rel = 3 #[(0,9),(3,12)] # l-integer if homogeneous relations Rad^l, or a list of minimal zero-relations given through the vertices they start and end in 
+n=4 #Number of vertices
+m=2 #how extended the module category is
+rel = [(1,3)] #[(0,9),(3,12)] # l-integer if homogeneous relations Rad^l, or a list of minimal zero-relations given through the vertices they start and end in 
 cutOffIterations = 200 #How many times do the while loop run before we give up?
 
 #Note that quivers are zero-indexed, i.e. Q_n: 0 -> 1 -> ... -> (n-1)
 
-yLevels = [-3,-2,-1,4,3,2,1,0] #Set the y-level which the tauOrbits of each projective is drawn
-tikzScale = (4,2) #The x- and y-scale of the tikz diagram, Recommended: (4,2) works well for most instances when printing homology
+yLevels = [-2,-1,1,0]#[-1,5,-1,5,-1,4,2.3,3,2,1,0] #Set the y-level which the tauOrbits of each projective is drawn
+tikzScale = (1,1) #The x- and y-scale of the tikz diagram, Recommended: (4,2) works well for most instances when printing homology
 nodeScale = 1 #The scale of each node in the tikz diagram
 setOutputName = None #String with your prefered name for Latex-file
 generateLatex = True #Set to False if you do not want to generate Latex-file
@@ -62,6 +62,7 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
     
 
     dimProjectives,radicalOfProjectives = findProjectivesDim(n,relations) 
+    print(dimProjectives)
     dimInjectives = findInjectiveDim(n,relations)[::-1]
 
     homologiesOfProjectives = findHomologyOfProjectives(dimProjectives,n,m)

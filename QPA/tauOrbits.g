@@ -1,11 +1,11 @@
 # Initial data
 
-Q:=Quiver(["v1","v2","v3","v4","v5","v6"],
-[["v1","v2","a"],["v2","v3","b"],["v3","v4","c"],["v4","v5","d"],["v5","v6","e"]]);
+Q:=Quiver(["v1","v2","v3","v4","v5","v6","v7","v8"],
+[["v1","v2","a"],["v2","v3","b"],["v3","v4","c"],["v4","v5","d"],["v5","v6","e"],["v6","v7","f"],["v7","v8","g"]]);
 
 KQ:=PathAlgebra(GF(47),Q);
 AssignGeneratorVariables(KQ);
-relns:=[a*b*c,b*c*d,c*d*e];
+relns:=[a*b*c,b*c*d,c*d*e,d*e*f,e*f*g];
 A:=KQ/relns;
 cat := CatOfRightAlgebraModules(A);
 
