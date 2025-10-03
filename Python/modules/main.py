@@ -18,21 +18,21 @@ import numpy as np
 Initial variables
 '''
 
-n=4 #Number of vertices
-m=2 #how extended the module category is
-rel = [(1,3)] #[(0,9),(3,12)] # l-integer if homogeneous relations Rad^l, or a list of minimal zero-relations given through the vertices they start and end in 
-cutOffIterations = 200 #How many times do the while loop run before we give up?
+n= 8 #Number of vertices
+m= 2 #how extended the module category is
+rel =3 #[(0,9),(3,12)] # l-integer if homogeneous relations Rad^l, or a list of minimal zero-relations given through the vertices they start and end in 
+cutOffIterations = 100 #How many times do the while loop run before we give up?
 
 #Note that quivers are zero-indexed, i.e. Q_n: 0 -> 1 -> ... -> (n-1)
 
-yLevels = [-2,-1,1,0]#[-1,5,-1,5,-1,4,2.3,3,2,1,0] #Set the y-level which the tauOrbits of each projective is drawn
-tikzScale = (1,1) #The x- and y-scale of the tikz diagram, Recommended: (4,2) works well for most instances when printing homology
+yLevels = []#[-2,-2,-2,-1,6,5,4,3,2,1,0]#[-1,5,-1,5,-1,4,2.3,3,2,1,0] #Set the y-level which the tauOrbits of each projective is drawn
+tikzScale = (.5,.8) #The x- and y-scale of the tikz diagram, Recommended: (4,2) works well for most instances when printing homology
 nodeScale = 1 #The scale of each node in the tikz diagram
-setOutputName = None #String with your prefered name for Latex-file
+setOutputName = None #str(m)+"-mod_Lambda("+str(n)+","+str(rel)+")" #String with your prefered name for Latex-file, if None a predefined name will be given
 generateLatex = True #Set to False if you do not want to generate Latex-file
 compileToPDF = True #Set to False if you do not want to automatically compile pdf
 highlightConcentradedHomology = False #Set to False if you do not want to highlight nodes with concentrated homology
-drawOnlyCircles = False #Set to False if you want the homologies printed as node labels
+drawOnlyCircles = True #Set to False if you want the homologies printed as node labels
 printDiagramTitle = False
 
 '''
@@ -41,13 +41,19 @@ The main loop
 
 def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputName=None,outputLatex=True,compileLatex=True,hightlightConcHom=False,drawCircles=False,printLabel=True):
     SetOutputName = outputName
+    currentTime = datetime.today().strftime('%Y-%m-%d')
     if isinstance(rel, int):
         relationsInput = [(i,i+rel) for i in range(n-rel)]
         if outputName == None:
-            SetOutputName = "HomogeneousNakayama_n="+str(n)+"_m="+str(m)+"_l="+str(rel)
+            SetOutputName = currentTime+"_"+str(m)+"-mod_Lambda("+str(n)+","+str(rel)+")"
     else:
         relationsInput = rel
-        
+    
+    if SetOutputName == None:
+        texFileName = currentTime+"_Nakayama_n="+str(n)+"_m="+str(m)
+    else:
+        texFileName = SetOutputName
+
     relations = checkRelations(n,relationsInput)
     if relations == None:
         print(f"\033[1;31m The relations are not in accepted form \033[0m")
@@ -138,13 +144,8 @@ def mainLoop(n,rel,m,cutOff=100,yLevels=None,tikzScale=(1,1),nodeScale=1,outputN
         stringToSave = preLatex + preTikz(tikzScale)+TikzLabel +TikzNodes+TikzIrrArrows+TikzTauArrows+postTikz+postLatex
     else:
         stringToSave = preLatex + preTikz(tikzScale)+TikzNodes+TikzIrrArrows+TikzTauArrows+postTikz+postLatex
-    currentTime = datetime.today().strftime('%Y-%m-%d')
-    if SetOutputName == None:
-        texFileName = "_Nakayama_n="+str(n)+"_m="+str(m)
-    else:
-        texFileName = SetOutputName
     outputDirectory = "./Python/modules/outputLatexFiles/"
-    fileName =outputDirectory+currentTime+texFileName+".tex"
+    fileName =outputDirectory+texFileName+".tex"
     if outputLatex:
         with open(fileName,"w") as file:
             file.write(stringToSave)
