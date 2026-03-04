@@ -39,10 +39,22 @@ def bmatrix(a):
     
     return '\n'.join(rv)
 
-def drawNodes(M,x,y,scale=1,highlightConcHom=False,drawOnlyCircles=False):
+def moduloMatrix(M,k):
+    m=M.shape
+    tempMatrix = np.zeros((m[0],k))
+    for i in range(m[0]):
+        for j in range(m[1]):
+            tempMatrix[i][j%k]+=M[i][j]
+    return tempMatrix
+
+def drawNodes(M,x,y,scale=1,highlightConcHom=False,drawOnlyCircles=False,coverApprox=None):
     node = r'\node (' + M.id +') at (' + str(x)+ ','+ str(y)+') [scale='+str(scale)
     circleNode = r',draw,fill,circle,inner sep=0pt,minimum size=4pt] {};' +'\n'
-    matrixNode =  r'] {$'+bmatrix(M.homologies[::].astype(np.int64))+r'$};'+'\n'
+    if coverApprox == None:
+        matrixNode =  r'] {$'+bmatrix(M.homologies[::].astype(np.int64))+r'$};'+'\n'
+    else:
+        tempM = moduloMatrix(M.homologies,coverApprox)
+        matrixNode =  r'] {$'+bmatrix(tempM[::].astype(np.int64))+r'$};'+'\n'
     if M.concentratedHomology != None and highlightConcHom:
         if drawOnlyCircles:
             node = node + ",red" + circleNode

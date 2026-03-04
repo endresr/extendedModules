@@ -12,54 +12,41 @@ cat := CatOfRightAlgebraModules(A);
 zero := ZeroModule(A); 
 I_1:=IndecInjectiveModules(A)[1];
 I_2:=IndecInjectiveModules(A)[2];
-#I_2:=IndecInjectiveModules(A)[3];
-#I_3:=IndecInjectiveModules(A)[4];
-#I_4:=IndecInjectiveModules(A)[5];
-#I_5:=IndecInjectiveModules(A)[6];
-#I_6:=IndecInjectiveModules(A)[7];
-#I_7:=IndecInjectiveModules(A)[8];
-#I_8:=IndecInjectiveModules(A)[9];
-#I10:=IndecInjectiveModules(A)[10];
-#I11:=IndecInjectiveModules(A)[11];
-#I12:=IndecInjectiveModules(A)[12];
 
 P_1:=IndecProjectiveModules(A)[1];
 P_2:=IndecProjectiveModules(A)[2];
-#P_2:=IndecProjectiveModules(A)[3];
-#P_3:=IndecProjectiveModules(A)[4];
-#P_4:=IndecProjectiveModules(A)[5];
-#P_5:=IndecProjectiveModules(A)[6];
-#P_6:=IndecProjectiveModules(A)[7];
-#P_7:=IndecProjectiveModules(A)[8];
-#P_8:=IndecProjectiveModules(A)[9];
-#P10:=IndecProjectiveModules(A)[10];
-#P11:=IndecProjectiveModules(A)[11];
-#P12:=IndecProjectiveModules(A)[12];
-
 
 S_1:=SimpleModules(A)[1];
 S_2:=SimpleModules(A)[2];
-#S_2:=SimpleModules(A)[3];
-#S_3:=SimpleModules(A)[4];
-#S_4:=SimpleModules(A)[5];
-#S_5:=SimpleModules(A)[6];
-#S_6:=SimpleModules(A)[7];
-#S_7:=SimpleModules(A)[8];
-#S_8:=SimpleModules(A)[9];
-#S10:=SimpleModules(A)[10];
-#S11:=SimpleModules(A)[11];
 
-
-#M12:=Range(AlmostSplitSequence(S_1)[1]);
-#M23:=Range(AlmostSplitSequence(S_2)[1]);
-#M34:=Range(AlmostSplitSequence(S_3)[1]);
-#M45:=Range(AlmostSplitSequence(S_4)[1]);
-#M56:=Range(AlmostSplitSequence(S_5)[1]);
-#M67:=Range(AlmostSplitSequence(S_6)[1]);
-#M78:=Range(AlmostSplitSequence(S_7)[1]);
-#M89:=Range(AlmostSplitSequence(S8)[1]);
-#M910:=Range(AlmostSplitSequence(S9)[1]);
-
+##Showing problem
+Print("\n");
+Print(TextAttr.bold,"Algebra: Cyclic Nakayama with two nodes and relations of length 2",TextAttr.normal,"\n\n");
+Print("Problem can be seen on the simples. ","\n");
+Print("Take the projective resolution of simple at 1:","\n\n");
+projResS1:=ProjectiveResolutionOfComplex(StalkComplex(cat,S_1,0));
+ObjectOfComplex(projResS1,3);
+Print(projResS1, "\n\n");
+Print("The labels are wrong, but differentials seems to be correct,\n e.g. for differential at second position","\n\n");
+Print(TextAttr.bold,"Kernel is:",TextAttr.normal,"\n");
+f:=DifferentialOfComplex(projResS1,2);
+kerF:=Kernel(f);
+Print(kerF,"\n\n");
+Print(TextAttr.bold,"Image is:",TextAttr.normal,"\n");
+imF:=Image(f);
+Print(imF,"\n\n");
+Print("However, after applying the Nakayama functor, \n","all differentials are set to identity.","\n\n");
+Print("Nakayama functor applied:","\n\n");
+nakOfprojResS1:=ProjectiveToInjectiveComplex(projResS1);
+Print(nakOfprojResS1,"\n\n");
+Print("Look at differential at position 2:","\n\n");
+g:=DifferentialOfComplex(nakOfprojResS1,2);
+Print(TextAttr.bold,"Kernel is:",TextAttr.normal,"\n");
+kerG:=Kernel(g);
+Print(kerG,"\n\n");
+Print(TextAttr.bold,"Image is:",TextAttr.normal,"\n");
+imG:=Image(g);
+Print(imG,"\n");
 
 
 # Currently not available in QPA 22.05.2025
@@ -107,15 +94,6 @@ end;
 
 ## Functions in project
 
-
-taum := function(complex, m)
-	local tauInverse, projResTauInverse;
-	tauInverse := Shift(ProjectiveToInjectiveComplex(BrutalTruncationAbove(ProjectiveResolutionOfComplex(complex), m)), 1);
-	projResTauInverse := ProjectiveResolutionOfComplex(tauInverse);
-	Print(tauInverse, "\n");
-  return projResTauInverse;
-end;
-
 taumNew := function(complex, m)
 	local tauInverse, projResTauInverse,projRes,projResBound,nakProjResBound,shiftedTemp,tauInv;
 	projRes := ProjectiveResolutionOfComplex(complex);
@@ -135,53 +113,6 @@ extendedInjective := function(A, i, m)
   local cat;
   cat := CatOfRightAlgebraModules(A);
   return StalkComplex(cat, IndecInjectiveModules(A)[i], m-1);
-end;
-
-#Temporary function for cyclic nakayama m=2
-middleOfSequenceTemp := function(x,y)
-	local firstComplex, secondComplex, f, chainMap, cone, outputComplex, hom1, hom2, obc0, obc1, obc2,hComp0,hComp1,tempVar;
-	
-	hom1 := HomOverAlgebra(x[1],x[2]);
-	hom2 := HomOverAlgebra(y[1],y[2]);
-	
-	if x[1]=ZeroModule(A) then
-		firstComplex := StalkComplex(cat,x[2],-1);
-	elif x[2]=ZeroModule(A) then
-		firstComplex := StalkComplex(cat,x[1],0);
-	else
-		firstComplex := FiniteComplex(cat,0,hom1);
-	fi;
-	
-	if y[1]=ZeroModule(A) then
-		secondComplex := StalkComplex(cat,y[2],0);
-	elif y[2]=ZeroModule(A) then
-		secondComplex := StalkComplex(cat,y[1],1);
-	else
-		secondComplex := FiniteComplex(cat,1,hom2);
-	fi;
-	
-	f:= HomOverAlgebra(x[1],y[2]);
-	chainMap := FiniteChainMap(firstComplex,secondComplex,0,f);
-	cone := MappingCone(chainMap);
-	outputComplex := cone[1];
-	
-	tempVar := ObjectOfComplex(outputComplex,2);
-	
-	#Print(secondComplex);
-
-	obc0 := List(DecomposeModuleViaCharPoly(ObjectOfComplex(outputComplex,0)), a-> DimensionVector(a));
-	obc1 := List(DecomposeModuleViaCharPoly(ObjectOfComplex(outputComplex,1)), a-> DimensionVector(a));
-
-	hComp0 := List(DecomposeModuleViaCharPoly(homologyOfComplex(outputComplex,0)), a-> DimensionVector(a));
-	hComp1 := List(DecomposeModuleViaCharPoly(homologyOfComplex(outputComplex,1)), a-> DimensionVector(a));
-	
-	Print("Summands degree 0: ", obc0,"\n");
-	Print("Summands degree 1: ",obc1,"\n");
-	
-	Print("0th homology: ",hComp0,"\n");
-	Print("1st homology: ",hComp1,"\n");
-	
-	return outputComplex;
 end;
 
 printFirstHomologies := function(C)
@@ -207,3 +138,4 @@ printFirstHomologies := function(C)
 	
 	return C;
 end;
+
