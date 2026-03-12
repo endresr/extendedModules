@@ -180,7 +180,7 @@ class ExtendedModuleCategoryOfNakayama:
         self.ylevels = None
         while self.ylevels is None:
             try:
-                print("\n\033[1;94mSet the y-levels for which the tau-orbits are drawn in the AR-quiver.\033[0m \n Enter 'preset' if you want standard levels, or enter a comma-separated list of 7 values.")
+                print("\n\033[1;94mSet the y-levels for which the tau-orbits are drawn in the AR-quiver.\033[0m \n Enter 'preset' if you want standard levels, or enter a comma-separated list of "+str(self.n)+" values.")
                 value = input("\nEnter: ")
                 temp = [float(x) for x in value.split(",")]
                 if value=='preset':
