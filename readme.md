@@ -13,14 +13,16 @@ This project provides python code to generate the postprojective component of th
 
 ## Getting Started
 1.	Clone the Repository:
+
 ```bash
 git clone https://github.com/endresr/extendedModules.git
 ```
 ## Usage
 Run the main program
-'''bash
+
+```bash
 python main.py
-'''
+```
 
 The program first asks you to input the extended module category you want to calculate.
 1. First the amount of simples \(n\) in your Nakayama algebra
@@ -45,7 +47,8 @@ The PDF is then generated and you get the following choices
 4. Quit
 
 ## Project Structure
-'''
+
+```
 extendedModules
 ├── modules/
 │   ├── classes.py      # Extendedmodule class definition and the Tau-function
@@ -55,7 +58,7 @@ extendedModules
 │   └── 
 ├── main.py            # Main program
 └── README.md
-'''
+```
 
 ## Examples
 
