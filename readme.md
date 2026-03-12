@@ -54,6 +54,8 @@ extendedModules
 │   ├── classes.py      # Extendedmodule class definition and the Tau-function
 │   ├── functions.py    # Basic functions for computations
 │   ├── drawGraph.py    # Code to construct the Latex file and compiling it
+├── AR-quivers/         # The folder which the output is saved
+│   └── 
 ├── Archive/            # Old files 
 │   └── 
 ├── main.py            # Main program
