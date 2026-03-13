@@ -20,6 +20,20 @@ class ExtendedModuleCategoryOfNakayama:
         self.projectiveModules = None
         self.tauOrbits = None
         self.modules = None
+        self.customFileName = None
+    
+    def _get_user_answer_yes_no(self,prompt):
+        while True:
+            print(prompt)
+            answer = input("\nEnter:")
+            if answer.lower() =="y":
+                return True
+                
+            elif answer.lower() !="n":
+                raise TypeError(f"\033[1;31m Error: Answer either 'y' or 'n'\033[0m ")
+            else:
+                return False
+
     
     def _get_validated_input(self, prompt, validator, error_msg):
         """Generic input validator"""
@@ -87,9 +101,8 @@ class ExtendedModuleCategoryOfNakayama:
         )
     def _get_valid_relations(self):
         while True:
-            print("\n\033[1;94mDo you want homogeneous relations? (y/n)\033[0m")
-            answer = input("Enter:")
-            if answer.lower() == "y":
+            answer = self._get_user_answer_yes_no("\n\033[1;94mDo you want homogeneous relations? (y/n)\033[0m")
+            if answer:
                 while True:
                     try:
                         print("\n\033[1;94mEnter relation length less than "+str(self.n)+"\033[0m")
@@ -150,7 +163,7 @@ class ExtendedModuleCategoryOfNakayama:
                 notFinishedARquiver = True
             if continueLoop == False and len(Next)>0:
                 print("Error: Homologies are non-positive")
-        print(f"\033[1;92m Finalized calculations. Found "+str(len(modules))+"modules.\033[0m ")
+        print(f"\033[1;92mFinalized calculations. Found "+str(len(modules))+" modules.\033[0m ")
         self.modules=modules
     
     def _reset_startvalues(self):
@@ -169,6 +182,7 @@ class ExtendedModuleCategoryOfNakayama:
         self.tikzScale = None 
         self.nodeScale = None 
         self.drawOnlyCircles = None 
+        self.customFileName = None
         
     def _standard_drawingvalues(self):
         self.ylevels = range(self.n)[::-1]
@@ -182,13 +196,14 @@ class ExtendedModuleCategoryOfNakayama:
             try:
                 print("\n\033[1;94mSet the y-levels for which the tau-orbits are drawn in the AR-quiver.\033[0m \n Enter 'preset' if you want standard levels, or enter a comma-separated list of "+str(self.n)+" values.")
                 value = input("\nEnter: ")
-                temp = [float(x) for x in value.split(",")]
                 if value=='preset':
                     self.ylevels=range(self.n)[::-1]
-                elif len(temp)!= self.n:
-                    raise TypeError(f" \033[1;31m There are "+str(self.n)+"orbits which need a y-level.\033[0m")
-                else: 
-                    self.ylevels=temp
+                else:
+                    temp = [float(x) for x in value.split(",")]
+                    if len(temp)!= self.n:
+                        raise TypeError(f" \033[1;31m There are "+str(self.n)+"orbits which need a y-level.\033[0m")
+                    else: 
+                        self.ylevels=temp
             except ValueError as e:
                 print(f"\033[1;31m Error: {str(e)}\033[0m")
             except TypeError as e:
@@ -222,35 +237,21 @@ class ExtendedModuleCategoryOfNakayama:
     
     def _get_valid_circles(self):
         self.drawOnlyCircles = None
-        while self.drawOnlyCircles is None:
-            print("\n\033[1;94mDo you want to print the cohomological dimension vectors? (y/n)\033[0m")
-            value = input("\nEnter:")
-            if value.lower() =="y":
-                self.drawOnlyCircles = False
-            elif value.lower() =="n":
-                self.drawOnlyCircles = True
-            else:
-                raise TypeError(f"\033[1;31m Error: Answer either 'y' or 'n'\033[0m ")
-
+        dimVec = self._get_user_answer_yes_no("\n\033[1;94mDo you want to print the cohomological dimension vectors? (y/n)\033[0m")
+        if dimVec:
+            self.drawOnlyCircles = False
+        else: 
+            self.drawOnlyCircles = True
     
     def _get_user_input_draw(self):
-        standard = None
-        while standard is None:
-            print("\n\033[1;94mDo you want to draw the AR-quiver with standard values? (y/n)\033[0m")
-            answer = input("\nEnter:")
-            if answer.lower() =="y":
-                self._standard_drawingvalues()
-                return
-                
-            elif answer.lower() !="n":
-                raise TypeError(f"\033[1;31m Error: Answer either 'y' or 'n'\033[0m ")
-            else:
-                standard = False
-
-        self._get_valid_ylevels()
-        self._get_valid_tikz_scale()
-        self._get_valid_node_scale()
-        self._get_valid_circles()
+        standard = self._get_user_answer_yes_no("\n\033[1;94mDo you want to draw the AR-quiver with standard values? (y/n)\033[0m")
+        if standard:
+            self._standard_drawingvalues()
+        else:
+            self._get_valid_ylevels()
+            self._get_valid_tikz_scale()
+            self._get_valid_node_scale()
+            self._get_valid_circles()
         
         
             
@@ -273,8 +274,9 @@ class ExtendedModuleCategoryOfNakayama:
         print("1. Redraw using custom settings")
         print("2. Start from beginning")
         print("3. Change cutoff for iterations")
-        print("4. Quit")
-        return input("\n Enter your choice (1-4): ")
+        print("4. Save output files")
+        print("5. Quit")
+        return input("\n Enter your choice (1-5): ")
 
     def _redraw_menu(self):
         print("\n\033[1;96mWhat do you want to change?\033[0m")
@@ -295,6 +297,7 @@ class ExtendedModuleCategoryOfNakayama:
         return choice
 
     def _redraw(self):
+        self.customFileName = None
         menu_actions = {
             '1' : self._get_valid_ylevels,
             '2' : self._get_valid_tikz_scale,
@@ -307,6 +310,7 @@ class ExtendedModuleCategoryOfNakayama:
         self._draw_quiver()
 
     def _new_cutoff(self):
+        self.customFileName = None
         self.cutoffIterations = None
         while self.cutoffIterations is None:
             try:
@@ -318,6 +322,49 @@ class ExtendedModuleCategoryOfNakayama:
         self._calculate_PostProjective()
         self._get_user_input_draw()
         self._draw_quiver()
+        
+    
+    def _save_Pdf(self):
+        if self.relLength is None:
+            stdFileName = str(self.m)+"-mod_Lambda-"+str(self.n)+"-custom_relations"
+        else:
+            stdFileName = str(self.m)+"-mod_Lambda-"+str(self.n)+"-"+str(self.relLength)
+        while self.customFileName is None:
+            tempFilename = stdFileName
+            standard = self._get_user_answer_yes_no("\n\033[1;94mDo you want to save with the following standard name? (y/n)\033[0m"+"\n  "+stdFileName)
+            
+            if not standard:
+                while True:
+                    print("\n\033[1;94mEnter a name for the saved files (without .pdf or .tex)\033[0m")
+                    tempInput = input("\nEnter: ")
+                    if ".tex" in tempInput or ".pdf" in tempInput:
+                        raise TypeError(f"\033[1;31m Error: Do not enter file extension (.tex or .pdf)\033[0m ")
+                    else:
+                        tempFilename = tempInput
+                        break
+            if not check_if_name_taken(tempFilename+".pdf","./AR-quivers/"):
+                try:
+                    save_graph("preview",tempFilename,"./AR-quivers/")
+                    self.customFileName =tempFilename
+                    print(f"\033[1;33m The files have been saved as: \033[0m" + "./AR-quivers/"+tempFilename)
+                except Exception as e:
+                    print(f"\033[1;91mAn unexpected error occurred:\033[0m {e}")
+            else:
+                overwrite = self._get_user_answer_yes_no(f"\033[1;31m The filename already exists. Overwrite? (y/n)\033[0m")
+                if overwrite:
+                    try:
+                        save_graph("preview",tempFilename,"./AR-quivers/")
+                        self.customFileName =tempFilename
+                        print(f"\033[1;33m The files have been saved as: \033[0m" + "./AR-quivers/"+tempFilename)
+                    except Exception as e:
+                        print(f"\033[1;91mAn unexpected error occurred:\033[0m {e}")
+    
+    def _quit(self):
+        if self.customFileName is None:
+            quitWithoutSaving = self._get_user_answer_yes_no("\n\033[1;91mFinal version not saved. Continue without saving? (y/n)\033[0m")
+            if not quitWithoutSaving:
+                self._save_Pdf()
+        print("\nThank you! Bye!")
     
     def run(self):
         self.intialize()
@@ -326,19 +373,20 @@ class ExtendedModuleCategoryOfNakayama:
             '1' : self._redraw,
             '2' : self.intialize,
             '3' : self._new_cutoff,
-            '4': lambda: print("\nThank you! Bye!")
+            '4' : self._save_Pdf,
+            '5': self._quit
         }
         
         while True:
             choice = self.display_menu()
-            if choice == '4':
+            if choice == '5':
                 menu_actions[choice]()
                 break
             action = menu_actions.get(choice)
             if action:
                 action()
             else:
-                print("\n\033[1;91mInvalid choice. Please select 1-4.\033[0m")
+                print("\n\033[1;91mInvalid choice. Please select 1-5.\033[0m")
 
 if __name__ == "__main__":
     calculator = ExtendedModuleCategoryOfNakayama()

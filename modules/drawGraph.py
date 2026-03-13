@@ -6,6 +6,7 @@ import subprocess
 import shutil
 import os
 import numpy as np
+from pathlib import Path
 
 def compile_latex_with_latexmk(filename_without_extension, output_dir=None,input_dir=None):
     """
@@ -39,7 +40,7 @@ def compile_latex_with_latexmk(filename_without_extension, output_dir=None,input
     try:
         # Run latexmk
         subprocess.check_call(command)
-        print(f"\033[1:92mSuccessfully compiled {source_file}.\033[0m")
+        print(f"\033[1:32mSuccessfully compiled {source_file}.\033[0m")
 
         # If an output directory is specified, move the final PDF
         if output_dir:
@@ -152,13 +153,21 @@ def build_Quiver(n,m,rel,projectiveModules,cutoff,tikzScale,nodeScale,hightlight
                     TikzTauArrows += drawTauArrow(M)
         
         stringToSave = preLatex + preTikz(tikzScale)+TikzNodes+TikzIrrArrows+TikzTauArrows+postTikz+postLatex
-        outputDirectory = "./AR-quivers/"
+        outputDirectory = './'#"./AR-quivers/"
         currentTime = datetime.today().strftime('%Y-%m-%d')
-        if rel is None:
-            fileName = currentTime+"_"+str(m)+"-mod_Lambda-"+str(n)+"-custom_relations"
-        else:
-            fileName = currentTime+"_"+str(m)+"-mod_Lambda-"+str(n)+"-"+str(rel)
+        #if rel is None:
+        #    fileName = currentTime+"_"+str(m)+"-mod_Lambda-"+str(n)+"-custom_relations"
+        #else:
+        #    fileName = currentTime+"_"+str(m)+"-mod_Lambda-"+str(n)+"-"+str(rel)
+        fileName ='preview'
         with open(outputDirectory+fileName+".tex","w") as file:
             file.write(stringToSave)
         compile_latex_with_latexmk(fileName,outputDirectory,outputDirectory)
-        
+
+def save_graph(oldName,fileName,outputDirectory):
+    shutil.move('./'+oldName+'.tex',outputDirectory+fileName+".tex")
+    shutil.move('./'+oldName+'.pdf',outputDirectory+fileName+".pdf")
+
+def check_if_name_taken(filename,dir):
+    filepath = Path(dir + filename)
+    return filepath.exists()
