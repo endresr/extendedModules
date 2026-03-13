@@ -40,17 +40,17 @@ You are then asked if you want the PDF to be generated with standard configurati
 6. The x- and y-scale as a tuple of numbers
 7. The scale for the nodes in the tikz-diagram
 8. If you want to print the nodes as cohomological dimension vectors or as filled circles.
+
 The PDF is then generated in the main folder as "preview.pdf" and you get the following choices
 1. Redraw using custom settings (You can then change the settings in steps 5.-8.)
-  1. Change y-levels
-  2. Set x- and y-scales
-  3. Scale nodes
-  4. Print cohomological dimension vectors
-  5. Go through all settings
+    1. Change y-levels
+    2. Set x- and y-scales
+    3. Scale nodes
+    4. Print cohomological dimension vectors
+    5. Go through all settings
 2. Start from the beginning
 3. Change the cutoff for the initial calculations
-4. Save output files
-  - Svaed files are stored in the folder /AR-quivers/
+4. Save output files (Saved files are stored in the folder /AR-quivers/)
 5. Quit
 
 ## Project Structure
