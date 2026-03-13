@@ -30,7 +30,7 @@ class ExtendedModuleCategoryOfNakayama:
                 return True
                 
             elif answer.lower() !="n":
-                raise TypeError(f"\033[1;31m Error: Answer either 'y' or 'n'\033[0m ")
+                print(f"\033[1;31m Error: Answer either 'y' or 'n'\033[0m ")
             else:
                 return False
 
@@ -338,7 +338,7 @@ class ExtendedModuleCategoryOfNakayama:
                     print("\n\033[1;94mEnter a name for the saved files (without .pdf or .tex)\033[0m")
                     tempInput = input("\nEnter: ")
                     if ".tex" in tempInput or ".pdf" in tempInput:
-                        raise TypeError(f"\033[1;31m Error: Do not enter file extension (.tex or .pdf)\033[0m ")
+                        print(f"\033[1;31m Error: Do not enter file extension (.tex or .pdf)\033[0m ")
                     else:
                         tempFilename = tempInput
                         break
