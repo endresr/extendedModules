@@ -35,13 +35,15 @@ The program first asks you to input the extended module category you want to cal
 4. The relations of the algebra.
   - If you want homogeneous relations, you give a number less than the amount of simples
   - If you want other relations, input a list of tuples associated to the minimal relations
-You are then asked if you want the PDF to be generated with standard configurations. If not, you may choose
+
+  You are then asked if you want the PDF to be generated with standard configurations. If not, you may choose
+
 5. The y-levels of the \(\tau\)-orbits as a list of numbers
 6. The x- and y-scale as a tuple of numbers
 7. The scale for the nodes in the tikz-diagram
 8. If you want to print the nodes as cohomological dimension vectors or as filled circles.
 
-The PDF is then generated in the main folder as "preview.pdf" and you get the following choices
+The PDF is then generated in the main folder as "preview.pdf" along with the tex-file, and you get the following choices
 1. Redraw using custom settings (You can then change the settings in steps 5.-8.)
     1. Change y-levels
     2. Set x- and y-scales
