@@ -22,14 +22,17 @@ The linear Nakayama algebras are given by the path algebras of
 with some admissible relations.
 
 ### $3$-extended module category of $\Lambda(6,2)$
+
 <img src="Algebra1.jpg">
 
 The $3$-extended module category of the linear Nakayama algebra with $6$ nodes and homogeneous relations of length $2$ (Denoted by $3\operatorname{-mod}\Lambda(6,2)$), can be printed with or without dimension vectors as shown below.
 
-$3\operatorname{-mod}\Lambda(6,2)$ with dimension vectors:
+$3\mathrm{-mod}\Lambda(6,2)$ with dimension vectors:
+
 <img src="Example1.jpg" width="500">
 
-$3\operatorname{-mod}\Lambda(6,2)$ without dimension vectors:
+$3\mathrm{-mod}\Lambda(6,2)$ without dimension vectors:
+
 <img src="Example2.jpg" >
 
 ### $2$-extended module category of $\Lambda(10,4)$
@@ -38,6 +41,7 @@ The $2$-extended module category of the algebra given by
 <img src="Algebra3.jpg">
 
 printed without dimension vectors looks like:
+
 <img src="Example3.jpg">
 
 ## Prerequisites
