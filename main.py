@@ -361,7 +361,7 @@ class ExtendedModuleCategoryOfNakayama:
     
     def _quit(self):
         if self.customFileName is None:
-            quitWithoutSaving = self._get_user_answer_yes_no("\n\033[1;91mFinal version not saved. Continue without saving? (y/n)\033[0m")
+            quitWithoutSaving = self._get_user_answer_yes_no("\n\033[1;31mFinal version not saved. Continue without saving? (y/n)\033[0m")
             if not quitWithoutSaving:
                 self._save_Pdf()
         print("\nThank you! Bye!")
