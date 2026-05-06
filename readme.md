@@ -15,7 +15,7 @@ The project was developed to assist in the exploration and illustration of the p
 
 ## Output Examples:
 
-The linear Nakayama algebras are given by the path algebras of 
+The linear Nakayama algebras are given by the path algebras of the quiver
 
 <img src="Algebra2.jpg">
 
@@ -25,7 +25,7 @@ with some admissible relations.
 
 <img src="Algebra1.jpg">
 
-The $3$-extended module category of the linear Nakayama algebra with $6$ nodes and homogeneous relations of length $2$ (Denoted by $3\operatorname{-mod}\Lambda(6,2)$), can be printed with or without dimension vectors as shown below.
+The $3$-extended module category of the linear Nakayama algebra with $6$ nodes and homogeneous relations of length $2$ (Denoted by $3\mathrm{-mod}\Lambda(6,2)$), can be printed with or without dimension vectors as shown below.
 
 $3\mathrm{-mod}\Lambda(6,2)$ with dimension vectors:
 
