@@ -4,7 +4,7 @@ This tool computes and visualises algebraic structures called extended module ca
 
 Given a linear Nakayama algebra as input (defined by its size, relations, and extension parameter), the program computes a finite portion of the postprojective component of the extended module category and renders it as a publication-ready diagram. Output is generated as a TikZ/LaTeX PDF, with full control over layout, scaling, and node representation.
 
-The project was developed to assist in the exploration and illustration of the paper *A note on the $m$-extended module categories of Nakayama algebras* (https://arxiv.org/abs/2601.14843). It is open for anyone wanting to use it in their own research.
+The project was developed to assist in the exploration and illustration of the paper *A note on the m-extended module categories of Nakayama algebras* (https://arxiv.org/abs/2601.14843). It is open for anyone wanting to use it in their own research.
 
 ### What it does, concretely
 - Takes an algebra specification as input (number of simples, extension parameter, relations)
@@ -25,7 +25,7 @@ with some admissible relations.
 
 <img src="Algebra1.jpg">
 
-The $3$-extended module category of the linear Nakayama algebra with $6$ nodes and homogeneous relations of length $2$ (Denoted by $3\mathrm{-mod}\Lambda(6,2)$), can be printed with or without dimension vectors as shown below.
+The $3$-extended module category of the linear Nakayama algebra with $6$ nodes and homogeneous relations of length $2$ (Denoted by $3\mathrm{-mod}\Lambda(6,2)$ ), can be printed with or without dimension vectors as shown below.
 
 $3\mathrm{-mod}\Lambda(6,2)$ with dimension vectors:
 
